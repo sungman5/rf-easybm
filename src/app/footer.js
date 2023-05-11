@@ -12,10 +12,10 @@ export default function Footer({ isNavOpen }) {
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                         </svg>
                     </Link>
-                    <p><Link href="mailto:team_csr@woowahan.com" type="email">사이트 이용에 불편한 점은 메일로 알려 주세요.</Link></p>
+                    <p><Link href="mailto:team_csr@woowahan.com" type="email">사이트 이용에 불편한 점은 메일로 알려 주세요. team_csr@woowahan.com</Link></p>
                 </div>
 
-                <Link href={'https://mandao.baemin.in/editor?appId=5917&pageId=f_nwkUX'} target="_blank" className="text-BM-font">쉬운 배달앱 사용법 LinkDF 다운로드</Link>
+                <Link href={'https://drive.google.com/file/d/1h1-M0qL5s4X02tSseshmI_SBuyPCpXyt/view'} target="_blank" className="text-BM-font">쉬운 배달앱 사용법 PDF 다운로드</Link>
                 <p className="text-BM-font">ⓒ배달의민족, 소소한소통, 2023</p>
             </div>
         </footer>

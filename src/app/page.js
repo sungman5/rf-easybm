@@ -28,8 +28,8 @@ export default function Home() {
     <>
       <div className='flex flex-col h-full'>
         <section aria-describedby='상단 영역을 차지하는 메인 영역' className='px-4 py-8 grow'>
-          <h1 className='mb-2 text-lg font-bold sm:text-xl'>쉬운배달앱 사용법 소개</h1>          
-          <p className='text-base leading-relaxed break-keep sm:text-lg sm:leading-relaxed'>장애, 나이 상관없이 누구나 배달앱을 사용할 수 있도록 어려운 용어는 쉽게 바꾸고, 설명이 필요한 부분은 친절하게 안내했습니다. 쉬운 배달앱 사용법을 통해 발달장애인도, 시각장애인도, 어르신도 누구나 편리하게 배달로 음식과 생활용품을 주문할 수 있기를 바랍니다!</p>
+          <h1 className='mb-4 text-lg font-bold text-center sm:text-xl md:text-3xl'>쉬운 배달앱 사용법을 소개합니다!</h1>          
+          <p className='max-w-3xl m-auto text-base leading-relaxed text-center break-keep sm:text-lg sm:leading-relaxed'>장애, 나이 상관없이 누구나 배달앱을 사용할 수 있도록 어려운 용어는 쉽게 바꾸고, 설명이 필요한 부분은 친절하게 안내했습니다. 쉬운 배달앱 사용법을 통해 발달장애인도, 시각장애인도, 어르신도 누구나 편리하게 배달로 음식과 생활용품을 주문할 수 있기를 바랍니다!</p>
         </section>
         <section className='flex flex-col w-full'>
           <Image className='mx-auto' width={796} height={353} alt='시각장애인, 발달장애인, 노인 캐릭터' src={'/img/cover.png'} />
@@ -37,19 +37,22 @@ export default function Home() {
             <ul className='lg:flex'>
               <li className='flex flex-1 bg-BM-primary lg:h-60'>
                 <Link aria-label='준비하기' href={'/basic/0'} className='px-4 py-4 text-BM-black'>
-                  <span className='block text-base font-bold sm:text-lg sm:leading-relaxed lg:text-4xl font-hanna lg:mb-2'>준비하기</span>
+                  <Image src={'/img/basic_imgs/basic-title.png'} width={204} height={64} className='mb-2' alt='준비하기라고 써져있는 이미지'/>
+                  {/* <span className='block text-base font-bold sm:text-lg sm:leading-relaxed lg:text-4xl font-hanna lg:mb-2'>준비하기</span> */}
                   <span className='text-sm sm:text-base lg:text-lg break-keep'>앱 설치부터 회원가입까지! 배달앱을 시작해 보자.</span>
                 </Link>
               </li>
               <li className='flex flex-1 bg-BM-secondary lg:h-60'>
                 <Link aria-label='이용하기' href={'/usage/0'} className='px-4 py-4 text-BM-black'>
-                  <span className='block text-base font-bold sm:text-lg sm:leading-relaxed lg:text-4xl font-hanna lg:mb-2'>이용하기</span>
+                  <Image src={'/img/usage/usage-title.png'} width={204} height={64} className='mb-2' alt='이용라고 써져있는 이미지' />
+                  {/* <span className='block text-base font-bold sm:text-lg sm:leading-relaxed lg:text-4xl font-hanna lg:mb-2'>이용하기</span> */}
                   <span className='text-sm sm:text-base lg:text-lg break-keep'>음식 선택부터 결제까지! 배달앱으로 주문해 보자.</span>
                 </Link>
               </li>
               <li className='flex flex-1 bg-BM-tertiary lg:h-60'>
                 <Link aria-label='활용하기' href={'/advanced/0'} className='px-4 py-4 text-BM-black'>
-                  <span className='block text-base font-bold sm:text-lg sm:leading-relaxed lg:text-4xl font-hanna lg:mb-2'>활용하기</span>
+                  <Image src={'/img/advanced_imgs/advanced-title.png'} width={204} height={64} className='mb-2' alt='활용하기라고 써져있는 이미지' />
+                  {/* <span className='block text-base font-bold sm:text-lg sm:leading-relaxed lg:text-4xl font-hanna lg:mb-2'>활용하기</span> */}
                   <span className='text-sm sm:text-base lg:text-lg break-keep'>상황에 맞게 사용할 수 있는 다양한 기능을 알아보자.</span>
                 </Link>
               </li>
