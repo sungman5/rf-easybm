@@ -14,7 +14,8 @@ import UnderstandFirstPage from "../../../components/basic_understand";
 import Image from "next/image";
 import { basic } from "../../../../public/lib/data";
 import HTMLReactParser from "html-react-parser";
-import TailOptionBtn from "@/components/TailOptionBtn";
+import TailOption from "@/components/tailOptionBtn";
+
 
 
 
@@ -57,7 +58,7 @@ export default function Basic_detail() {
                             })
                         }
                     </div>
-                    <TailOptionBtn />
+                    <TailOption />
                 </section>
             }
         </>

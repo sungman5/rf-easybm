@@ -6,7 +6,8 @@ import { usage } from "../../../../public/lib/data";
 import { usePathname } from "next/navigation";
 import Usage_0_filter from "@/components/usage_filter";
 import Usage_1_Options from "@/components/usage_selectOption";
-import TailOptionBtn from "@/components/TailOptionBtn";
+import TailOption from "@/components/tailOptionBtn";
+
 
 
 export default function Usage_detail() {
@@ -45,7 +46,7 @@ export default function Usage_detail() {
 
                 showUsagePage()
             }
-            <TailOptionBtn />
+<TailOption />
         </section>
     )
 }

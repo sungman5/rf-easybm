@@ -4,7 +4,8 @@ import Image from "next/image";
 import {usePathname} from "next/navigation";
 import { advanced } from "../../../../public/lib/data";
 import HTMLReactParser from "html-react-parser";
-import TailOptionBtn from "@/components/TailOptionBtn";
+import TailOption from "@/components/tailOptionBtn";
+
 
 export default function Advanced_detail(){
     const pathname = usePathname();
@@ -86,7 +87,7 @@ export default function Advanced_detail(){
                     }
                     </ul>
                 </div> */}
-            <TailOptionBtn />
+                <TailOption />
         </section>
     )
 }

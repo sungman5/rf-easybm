@@ -1,6 +1,8 @@
 'use client';
 
-import TailOptionBtn from "@/components/TailOptionBtn";
+
+
+import TailOption from "@/components/tailOptionBtn";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -55,7 +57,7 @@ export default function MobileNav({isNavOpen, openNav}){
                     <li className="lg:py-2"><Link onClick={openNav} className={pathname === '/advanced/7' ? 'block px-2 rounded py-1 font-medium bg-BM-background text-BM-font' : "px-2 rounded block py-1 font-medium text-BM-font"} href={'advanced/7'}>할인 받아서 음식을 주문하고 싶어!</Link></li>
                 </ul>
             </div>
-            <TailOptionBtn />
+            <TailOption />
         </nav>
     )
 }

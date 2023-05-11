@@ -131,7 +131,7 @@ export default function AccessibilityButtons({zoom, isNavOpen, isContrast, setIs
             document.documentElement.style.setProperty('--BM-background', '#f9fafb')
             setIsContrast(false)
         }
-    }, [isContrast])
+    }, [isContrast, setIsContrast])
 
     //돋보기 상태
     const [isMagStatus, setIsMagStatue] = useState(false);
