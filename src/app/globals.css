@@ -17,6 +17,20 @@
   font-style: normal;
 }
 
+@layer utilites {
+  .caption {
+    @apply text-sm font-medium text-center text-BM-gray200;
+  }
+
+  .caption-lg {
+    @apply text-2xl font-medium text-center text-BM-gray200;
+  }
+
+  .caption-left {
+    @apply text-lg font-medium text-left text-BM-gray200;
+  }
+}
+
 @layer base {
   :root {
     --BM-primary: #23b8c0;    

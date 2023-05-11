@@ -4,7 +4,7 @@ import html2canvas from "html2canvas";
 import { useCallback, useState } from "react";
 // import setMagnifier from "../../public/lib/scripts/magnifier";
 
-export default function AccessibilityButtons({zoom, isNavOpen, setZoom}) {
+export default function AccessibilityButtons({zoom, isNavOpen, isContrast, setIsContrast, setZoom}) {
 
 //돋보기
     async function setMagnifier() {
@@ -107,7 +107,7 @@ export default function AccessibilityButtons({zoom, isNavOpen, setZoom}) {
     }
 
     //zoom
-    const [isContrast, setIsContrast] = useState(false);  
+
     const handleContrast = useCallback(() => {
         if (isContrast === false) {
             //색상을 변경한다
@@ -128,6 +128,7 @@ export default function AccessibilityButtons({zoom, isNavOpen, setZoom}) {
             // document.documentElement.style.setProperty('--BM-black', '#414141')
             document.documentElement.style.setProperty('--BM-white', '#ffffff')            
             document.documentElement.style.setProperty('--BM-font', '#414141')
+            document.documentElement.style.setProperty('--BM-background', '#f9fafb')
             setIsContrast(false)
         }
     }, [isContrast])

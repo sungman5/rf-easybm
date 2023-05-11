@@ -17,23 +17,26 @@ export default function RootLayout({ children }) {
 
 
   //change color
-
+  const [isContrast, setIsContrast] = useState(false); 
+  // 확대 축소 상태
   const [zoom, setZoom] = useState(1);  
+  //네비게이션 오픈 상태
   const [isNavOpen, setIsNavOpen] = useState(false);
+  //처음으로 기능
 
   return (
-    <html style={{ zoom: zoom }} className='text-BM-font bg-BM-white' lang="ko">
+    <html style={{ zoom: zoom }} className='text-BM-font bg-BM-background' lang="ko">
       <Head>
         <title>쉬운 배달앱 사용법</title>
       </Head>
-      <body id='site-body' className='h-screen font-Pretendard'> 
-        <div id="wrapper" className='flex flex-col h-full'>
-          <Header isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
-          <main aria-hidden={isNavOpen} id='main' className='container flex-1 mx-auto'>
+      <body id='site-body' className='h-screen font-Pretendard '> 
+        <div id="wrapper" className='flex flex-col h-full pt-[56px]'>
+          <Header isContrast={isContrast} isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
+          <main aria-hidden={isNavOpen} id='main' className='container flex-1 mx-auto shadow-sm bg-BM-white'>
             {children}
           </main>
           <Footer isNavOpen={isNavOpen} />
-          <AccessibilityButtons isNavOpen={isNavOpen} zoom={zoom} setZoom={setZoom} />
+          <AccessibilityButtons isContrast={isContrast} setIsContrast={setIsContrast} isNavOpen={isNavOpen} zoom={zoom} setZoom={setZoom} />
         </div>
       </body>
     </html>

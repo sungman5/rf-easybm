@@ -7,7 +7,7 @@ import { useState } from "react";
 import { gsap } from "gsap";
 import MobileNav from "./mobileNav";
 
-export default function Header({isNavOpen, setIsNavOpen}){
+export default function Header({ isNavOpen, isContrast, setIsNavOpen}){
     
     // 메뉴 오픈 상태
 
@@ -28,10 +28,10 @@ export default function Header({isNavOpen, setIsNavOpen}){
     }
 
     return(
-        <header id="site-header" role="banner" className="bg-BM-background">
-            <div className="container flex items-center justify-between px-4 mx-auto h-14 bg-BM-background">
+        <header id="site-header" role="banner" className="fixed inset-x-0 top-0 bg-BM-background">
+            <div className="container flex items-center justify-between px-4 mx-auto shadow-sm h-14 bg-BM-white">
                 <Link href={'/'} >
-                    <Image src={'/img/easy-baemin-logo.svg'} width={158} height={20} alt="쉬운 배달앱 사용법 로고"/>
+                    <Image id="site-logo" src={isContrast === false ? '/img/easy-baemin-logo.svg' : '/img/easy-baemin-logo-w.svg' } width={158} height={20} alt="쉬운 배달앱 사용법 로고"/>
                 </Link>
                 <button type="menu" id="menu-icon" onClick={openNav} aria-label="전체메뉴" aria-expanded={isNavOpen}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

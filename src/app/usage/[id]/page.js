@@ -6,47 +6,46 @@ import { usage } from "../../../../public/lib/data";
 import { usePathname } from "next/navigation";
 import Usage_0_filter from "@/components/usage_filter";
 import Usage_1_Options from "@/components/usage_selectOption";
+import TailOptionBtn from "@/components/TailOptionBtn";
 
 
 export default function Usage_detail() {
     const pathname = usePathname();
-    const pageId = pathname.split('/')[pathname.split('/').length - 1]
+    const get_page_id = pathname.split('/')[pathname.split('/').length - 1]
     console.log(pathname)
 
     const showUsagePage = () => {
-        if (pageId === '0') {
+        if (get_page_id === '0') {
             return <Usage_0_filter />
-        } else if (pageId === '1') {
+        } else if (get_page_id === '1') {
             return <Usage_1_Options />
         }
     }
 
     return (
-        <section className="leading-relaxed">
-            <h1 className="mb-4 text-2xl text-center lg:text-5xl font-hanna md:text-3xl md:text-left text-BMblack">{usage[pageId].title}</h1>
-            <ul>
+        <section className="leading-relaxed break-keep 2xl:flex 2xl:flex-col 2xl:items-center ">
+            <h1 className="mb-12 text-3xl text-center lg:text-5xl font-hanna md:text-center md:text-4xl lg:mb-24">{usage[get_page_id].title}</h1>
+            <div className="md:grid md:grid-cols-[248px_248px_248px] lg:grid-cols-[248px_248px_248px_248px] xl:grid-cols-[248px_248px_248px_248px_248px]">
                 {
-                    usage[pageId].content.map((element) => {
+                    usage[get_page_id].content.map((element) => {
                         return (
-                            <li className="py-5 border-b md:flex md:gap-4 " key={element.id}>
-                                <Image className="w-56 mx-auto md:m-0 lg:w-80" src={element.img} width={600} height={1060} alt={element.alt} />
-                                <div className="md:translate-y-4 md:flex md:gap-4">
-                                    <div className="flex items-center justify-center w-8 h-8 mx-auto mb-2 font-bold rounded-full text-BMwhite bg-BMprimary">
-                                        {element.id}
-                                    </div>
-                                    <p className="text-center md:text-left md:text-2xl md:items-start md:leading-normal md:justify-start">{HTMLReactParser(element.desc)}</p>
-
+                            <div className="flex flex-col justify-center mb-6" key={element.id}>
+                                <div className="mb-2 h-fit">
+                                    <p className="flex items-center justify-center w-10 h-10 mx-auto mb-3 text-xl text-center rounded-full bg-BM-primary text-BM-white font-hanna">{element.id}</p>
+                                    <div className='text-lg md:px-8 font-semibold md:min-h-[88px] text-center md:text-sm  lg:text-base'>{HTMLReactParser(element.desc)}</div>
                                 </div>
-                            </li>
+                                <Image className="w-56 mx-auto md:mx-auto md:mb-6 lg:w-80" src={element.img} width={600} height={1060} alt={element.alt} />
+                            </div>
                         )
                     })
                 }
-            </ul>
+            </div>
             {console.log(showUsagePage())}
             {
 
                 showUsagePage()
             }
+            <TailOptionBtn />
         </section>
     )
 }
