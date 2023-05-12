@@ -60,7 +60,7 @@ export default function MobileNav({isNavOpen, openNav}){
                     <li className="lg:py-2"><Link onClick={openNav} className={pathname === '/advanced/7' ? 'block px-2 rounded py-1 font-medium bg-BM-background text-BM-font' : "px-2 rounded block py-1 font-medium text-BM-font"} href={'advanced/7'}>할인 받아서 음식을 주문하고 싶어!</Link></li>
                 </ul>
             </div>
-            <button className="w-32 h-10 rounded shadow-md scroll-smooth bg-BM-primary text-BM-white" onClick={scrollToTop}>맨 위로</button>
+            <button className="w-32 py-2 mx-auto rounded shadow-md scroll-smooth bg-BM-primary lg:mx-auto text-BM-white" onClick={scrollToTop}>맨 위로</button>
         </nav>
     )
 }

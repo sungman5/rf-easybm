@@ -36,22 +36,22 @@ export default function Home() {
           <nav>
             <ul className='lg:flex'>
               <li className='flex flex-1 bg-BM-primary lg:h-60'>
-                <Link aria-label='준비하기' href={'/basic/0'} className='px-4 py-4 text-BM-black'>
-                  <Image src={'/img/basic_imgs/basic-title.png'} width={204} height={64} className='mb-2' alt='준비하기라고 써져있는 이미지'/>
+                <Link aria-label='준비하기' href={'/basic/0'} className='w= px-4 py-4 text-BM-black'>
+                  <Image src={'/img/basic_imgs/basic-title.png'} width={204} height={64} className='w-32 mb-2 md:w-40 lg:w-48' alt='준비하기라고 써져있는 이미지'/>
                   {/* <span className='block text-base font-bold sm:text-lg sm:leading-relaxed lg:text-4xl font-hanna lg:mb-2'>준비하기</span> */}
                   <span className='text-sm sm:text-base lg:text-lg break-keep'>앱 설치부터 회원가입까지! 배달앱을 시작해 보자.</span>
                 </Link>
               </li>
               <li className='flex flex-1 bg-BM-secondary lg:h-60'>
-                <Link aria-label='이용하기' href={'/usage/0'} className='px-4 py-4 text-BM-black'>
-                  <Image src={'/img/usage/usage-title.png'} width={204} height={64} className='mb-2' alt='이용라고 써져있는 이미지' />
+                <Link aria-label='이용하기' href={'/usage/0'} className='w= px-4 py-4 text-BM-black'>
+                  <Image src={'/img/usage/usage-title.png'} width={204} height={64} className='w-32 mb-2 md:w-40 lg:w-48' alt='이용라고 써져있는 이미지' />
                   {/* <span className='block text-base font-bold sm:text-lg sm:leading-relaxed lg:text-4xl font-hanna lg:mb-2'>이용하기</span> */}
                   <span className='text-sm sm:text-base lg:text-lg break-keep'>음식 선택부터 결제까지! 배달앱으로 주문해 보자.</span>
                 </Link>
               </li>
               <li className='flex flex-1 bg-BM-tertiary lg:h-60'>
-                <Link aria-label='활용하기' href={'/advanced/0'} className='px-4 py-4 text-BM-black'>
-                  <Image src={'/img/advanced_imgs/advanced-title.png'} width={204} height={64} className='mb-2' alt='활용하기라고 써져있는 이미지' />
+                <Link aria-label='활용하기' href={'/advanced/0'} className='w= px-4 py-4 text-BM-black'>
+                  <Image src={'/img/advanced_imgs/advanced-title.png'} width={204} height={64} className='w-32 mb-2 md:w-40 lg:w-48' alt='활용하기라고 써져있는 이미지' />
                   {/* <span className='block text-base font-bold sm:text-lg sm:leading-relaxed lg:text-4xl font-hanna lg:mb-2'>활용하기</span> */}
                   <span className='text-sm sm:text-base lg:text-lg break-keep'>상황에 맞게 사용할 수 있는 다양한 기능을 알아보자.</span>
                 </Link>

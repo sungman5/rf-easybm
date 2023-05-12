@@ -567,7 +567,7 @@ export const advanced = [
             body: [
                 { id: 1, item: '가게 사장님께 메시지를 보내서 원하는 것을 말하면 사장님이 메시지를 보고 부탁을 들어줍니다.' },
                 { id: 2, item: '필요한 것이 있다면 주문하기 전에 가게 사장님께 부탁해보세요.' },
-                { id: 3, item: '<p className="text-sm caption-left">*들어주기 어려운 부탁은 사장님이 들어주지 못할 수도 있습니다.</p>' },
+                { id: 3, item: '<span className="text-sm caspantion-left">*들어주기 어려운 부탁은 사장님이 들어주지 못할 수도 있습니다.</span>' },
             ]
         },
         tips:

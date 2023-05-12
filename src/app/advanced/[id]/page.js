@@ -51,7 +51,7 @@ export default function Advanced_detail(){
                 </div>
             </div>
             <section className="leading-relaxed break-keep 2xl:flex 2xl:flex-col 2xl:items-center ">
-                <h1 className="mb-12 text-3xl text-center lg:text-5xl font-hanna md:text-center md:text-4xl lg:mb-24">{advanced[get_page_id].title}</h1>
+                {/* <h1 className="mb-12 text-3xl text-center lg:text-5xl font-hanna md:text-center md:text-4xl lg:mb-24">{advanced[get_page_id].title}</h1> */}
                 <div className="">
                     {
                         advanced[get_page_id].content.map((element) => {
@@ -87,7 +87,9 @@ export default function Advanced_detail(){
                     }
                     </ul>
                 </div> */}
-                <TailOption />
+                <div className="flex justify-center">
+                    <TailOption />
+                </div>
         </section>
     )
 }
