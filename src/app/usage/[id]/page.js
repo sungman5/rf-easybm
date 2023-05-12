@@ -24,7 +24,7 @@ export default function Usage_detail() {
     }
 
     return (
-        <section className="leading-relaxed break-keep 2xl:flex 2xl:flex-col 2xl:items-center ">
+        <section className="flex flex-col items-center leading-relaxed break-keep ">
             <h1 className="mb-12 text-3xl text-center lg:text-5xl font-hanna md:text-center md:text-4xl lg:mb-24">{usage[get_page_id].title}</h1>
             <div className="">
                 {

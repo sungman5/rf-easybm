@@ -15,7 +15,7 @@ export default function Advanced_detail(){
     return (
         <section className="leading-relaxed">
             <h1 className="mb-4 text-2xl text-center text-BMblack 2xl:mb-20 md:text-4xl lg:text-5xl font-hanna lg:mb-8">{HTMLReactParser(advanced[get_page_id].title)}</h1>
-            <div className="lg:flex lg:gap-8 lg:border-b lg:justify-center lg:pb-16 lg:mb-16">
+            <div className="mb-16 lg:flex lg:gap-8 lg:border-b lg:justify-center lg:pb-16 lg:mb-24">
                 <Image className="lg:w-[640px] 2xl:w-[560px]" src={advanced[get_page_id].cover_img_url} width={800} height={800} alt={advanced[get_page_id].alt} />
                 <div className="lg:flex lg:flex-col lg:justify-center">
                     <div className="py-4 border-b 2xl:border-0">
@@ -51,7 +51,7 @@ export default function Advanced_detail(){
                 </div>
             </div>
             <section className="leading-relaxed break-keep 2xl:flex 2xl:flex-col 2xl:items-center ">
-                {/* <h1 className="mb-12 text-3xl text-center lg:text-5xl font-hanna md:text-center md:text-4xl lg:mb-24">{advanced[get_page_id].title}</h1> */}
+                <h1 className="mb-12 text-2xl text-center lg:text-5xl font-hanna md:text-center md:text-4xl lg:mb-16">{advanced[get_page_id].tutorial_title}</h1>
                 <div className="">
                     {
                         advanced[get_page_id].content.map((element) => {

@@ -102,12 +102,12 @@ export default function Basic_dictionary() {
                         </svg>&nbsp;&ldquo;순살치킨을 양념 소스에 찍어 먹으면 더 맛있어!&rdquo;</p>
                 </li>
                 <li className="py-4 border-b">
-                    <h3 className="mb-2 text-xl font-hanna text-BM-primary md:text-2xl">토핑</h3>
+                    <h3 className="mb-2 text-xl font-hanna text-BM-primary md:text-2xl">옵션</h3>
                     <p className="md:leading-relaxed md:text-lg md:mb-2">음식을 더 맛있게 먹기 위해 주문할 때 추가하거나 선택하는 것. 재료를 추가하거나 맛을 바꿀 수 있다. 소스, 토핑, 사이드 메뉴 등이 옵션이다.</p>
                     <p className="text-base text-BMgray500">
                         <svg aria-hidden={true} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="inline w-6 h-6 text-BMtertiary">
                             <path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-2.625 6c-.54 0-.828.419-.936.634a1.96 1.96 0 00-.189.866c0 .298.059.605.189.866.108.215.395.634.936.634.54 0 .828-.419.936-.634.13-.26.189-.568.189-.866 0-.298-.059-.605-.189-.866-.108-.215-.395-.634-.936-.634zm4.314.634c.108-.215.395-.634.936-.634.54 0 .828.419.936.634.13.26.189.568.189.866 0 .298-.059.605-.189.866-.108.215-.395.634-.936.634-.54 0-.828-.419-.936-.634a1.96 1.96 0 01-.189-.866c0-.298.059-.605.189-.866zm2.023 6.828a.75.75 0 10-1.06-1.06 3.75 3.75 0 01-5.304 0 .75.75 0 00-1.06 1.06 5.25 5.25 0 007.424 0z" clipRule="evenodd" />
-                        </svg>&nbsp;&ldquo;옵션으로 치즈 토핑을 추가해서 치즈 닭갈비를 먹어야지&rdquo;</p>
+                        </svg>“옵션으로 치즈 토핑을 추가해서 치즈 닭갈비를 먹어야지.”</p>
                 </li>
                 <li className="py-4 border-b">
                     <h3 className="mb-2 text-xl font-hanna text-BM-primary md:text-2xl">사이드 메뉴</h3>
