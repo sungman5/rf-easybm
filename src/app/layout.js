@@ -25,16 +25,16 @@ export default function RootLayout({ children }) {
   //처음으로 기능
 
   return (
-    <html style={{
-      transform: `scale(${zoom})`,
-      transformOrigin: '0 0',
-      overflow: 'hidden',
-      width: `${100 / zoom}%`,
-      height: `${100 / zoom}%`,  }} className='text-BM-font bg-BM-background' lang="ko">
-    {/* <html style={{ zoom: zoom }} className='text-BM-font bg-BM-background' lang="ko"> */}
+    // <html style={{
+    //   transform: `scale(${zoom})`,
+    //   transformOrigin: '0 0',
+    //   overflow: 'auto',
+    //   width: `${100 / zoom}%`,
+    //   height: `${100 / zoom}%`,  }} className='text-BM-font bg-BM-background' lang="ko">
+    <html style={{ zoom: zoom }} className='text-BM-font bg-BM-background' lang="ko">
       <Head>
         <title>쉬운 배달앱 사용법</title>
-        {/* <meta name="viewport" content="width=device-width, initial-scale=1.0" /> */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <body id='site-body' className='h-screen font-Pretendard '> 
         <div id="wrapper" className='flex flex-col h-full pt-[56px]'>
