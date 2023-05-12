@@ -1,14 +1,14 @@
 'use client';
 
-import { MagnifierContainer, MagnifierPreview, MagnifierZoom } from "@ricarso/react-image-magnifiers";
+import { GlassMagnifier, MagnifierContainer, MagnifierPreview, MagnifierZoom } from "@ricarso/react-image-magnifiers";
 import html2canvas from "html2canvas";
+import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 // import setMagnifier from "../../public/lib/scripts/magnifier";
 
-
 export default function AccessibilityButtons({zoom, isNavOpen, isContrast, setIsContrast, setZoom}) {
 
-//돋보기
+// 기존 돋보기
     // async function setMagnifier() {
     //     console.log("캡쳐!");
 
@@ -27,11 +27,18 @@ export default function AccessibilityButtons({zoom, isNavOpen, isContrast, setIs
     //         const screenShot = await html2canvas(document.body);
     //         newFrame.id = "viewFrame";
     //         newFrame.classList.add(
+    //             // "fixed",
+    //             // "inset-0",
+    //             // "overflow-y-auto",
+    //             // "bg-green-100",
+    //             // "object-cover"
     //             "fixed",
-    //             "inset-0",
-    //             "overflow-y-auto",
+    //             // "top-0",
+    //             "w-full",
+    //             "h-full",
+    //             "overflow-y-scroll",
     //             "bg-green-100",
-    //             "object-cover"
+    //             "object-contain"
     //         );
     //         closeBtn.classList.add(
     //             "absolute",
@@ -94,36 +101,113 @@ export default function AccessibilityButtons({zoom, isNavOpen, isContrast, setIs
     //     };
 
     //     addScreenShot();
-    // }    
+    // }  
+    
+    async function setMagnifier() {
+        console.log("캡쳐!");
 
+        const targetDom = document.querySelector("header");
 
-//돋보기
-    function LetsMagnifier() {
-        const [imageURL, setImageURL] = useState(null);
+        // 스샷 후 메인에 띄우기
+        const addScreenShot = async () => {
+            const newFrame = document.createElement("div");
+            const closeBtn = document.createElement("button");
+            const magnifier = document.createElement("div");
 
-        // 웹 페이지의 스크린샷을 찍어 이미지 URL을 반환하는 함수
-        async function captureScreenshot() {
-            const canvas = await html2canvas(document.body);
-            return canvas.toDataURL();
-        }
+            const closeAction = () => {
+                newFrame.remove();
+            };
 
-        // 컴포넌트가 마운트될 때 스크린샷을 찍고 이미지 URL을 state에 저장
-        useEffect(() => {
-            captureScreenshot().then(setImageURL);
-        }, []);
+            const screenShot = await html2canvas(document.body);
+            newFrame.id = "viewFrame";
+            newFrame.classList.add(
+                "fixed",
+                "w-full",
+                "h-full",
+                "overflow-y-scroll",
+                "bg-green-100",
+                "object-contain"
+            );
+            closeBtn.classList.add(
+                "absolute",
+                "top-4",
+                "right-4",
+                "bg-BMgray200",
+                "rounded-full",
+                "w-16",
+                "h-16",
+                "shadow-lg",
+                "font-bold",
+                "text-lg"
+            );
+            closeBtn.innerText = "닫기";
+            closeBtn.addEventListener("click", closeAction);
 
-        // 이미지 URL이 준비되면 Magnifier 컴포넌트들을 렌더링
-        return imageURL && (
-            <MagnifierContainer>
-                <div className="example-class">
-                    <MagnifierPreview imageSrc={imageURL} />
-                </div>
-                <MagnifierZoom style={{ height: "400px" }} imageSrc={imageURL} />
-            </MagnifierContainer>
-        );
+            magnifier.className = "magnifier";
+            magnifier.classList.add(
+                "absolute",
+                "pointer-events-none",
+                "w-64",
+                "h-64",
+                "border",
+                "border-black",
+                "rounded-full",
+                "bg-no-repeat",
+                "hidden"
+            );
+
+            targetDom.appendChild(newFrame);
+            newFrame.appendChild(screenShot);
+            newFrame.appendChild(closeBtn);
+            newFrame.appendChild(magnifier);
+
+            let clickTimeout = null;
+
+            newFrame.addEventListener("click", () => {
+                if (clickTimeout) {
+                    clearTimeout(clickTimeout);
+                }
+                clickTimeout = setTimeout(() => {
+                    newFrame.remove();
+                    clickTimeout = null;
+                }, 500);  // 500ms 후에 newFrame을 제거
+            });
+
+            newFrame.addEventListener("mousemove", (event) => {
+                if (clickTimeout) {
+                    // 클릭 이벤트가 발생한 후 500ms 동안은 mousemove 이벤트를 무시
+                    return;
+                }
+
+                const bounds = newFrame.getBoundingClientRect();
+                const x = event.clientX - bounds.left;
+                const y = event.clientY - bounds.top;
+                const scaleX = 2;
+                const scaleY = 2;
+
+                magnifier.classList.remove("hidden");
+                magnifier.style.left = `${x - magnifier.offsetWidth / 2}px`;
+                magnifier.style.top = `${y - magnifier.offsetHeight / 2}px`;
+                magnifier.style.backgroundImage = `url(${screenShot.toDataURL()})`;
+                magnifier.style.backgroundSize = `${newFrame.offsetWidth * scaleX}px ${newFrame.offsetHeight * scaleY}px`;
+                const bgPosX = (x * scaleX) - (magnifier.offsetWidth / 2);
+                const bgPosY = (y * scaleY) - (magnifier.offsetHeight / 2);
+                magnifier.style.backgroundPosition = `-${bgPosX}px -${bgPosY}px`;
+            });
+
+            newFrame.addEventListener("mouseleave", () => {
+                magnifier.classList.add("hidden");
+            });
+
+            console.log(screenShot);
+            console.log(newFrame);
+        };
+
+        addScreenShot();
     }
 
 
+    //돋보기
 
 
     //줌
@@ -166,20 +250,13 @@ export default function AccessibilityButtons({zoom, isNavOpen, isContrast, setIs
         }
     }, [isContrast, setIsContrast])
 
-    //돋보기 상태
-    const [isMagStatus, setIsMagStatue] = useState(false);
+
+
     
-    return (
+    return (        
         
         <section aria-hidden={isNavOpen} id="mobile-option-set" className="fixed right-0 flex flex-col shadow-md top-1/3 w-28 bg-BM-white">
-            
-            {/* <MagnifierContainer>
-                <div className="example-class">
-                    <MagnifierPreview imageSrc="./image.jpg" />
-                </div>
-                <MagnifierZoom style={{ height: "400px" }} imageSrc="./image.jpg" />
-            </MagnifierContainer> */}
-            
+
             <button onClick={increaseZoom} aria-label="화면 확대" type="button" className="flex items-center gap-2 w-28">
                 <span aria-hidden={true} className="flex items-center justify-center w-12 h-12 bg-BM-tertiary">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -210,15 +287,15 @@ export default function AccessibilityButtons({zoom, isNavOpen, isContrast, setIs
                 </span>
                 <span className="flex-1 text-left">고대비</span>
             </button>
-{/* 
-            <button onClick={letsMagnifier} type="button" aria-label="돋보기" aria-checked={isMagStatus} role="checkbox" className="flex items-center gap-2 w-28">
+
+            <button onClick={setMagnifier} type="button" aria-label="돋보기"  className="flex items-center gap-2 w-28">
                 <span aria-hidden={true} className="flex items-center justify-center w-12 h-12 bg-BM-tertiary">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                     </svg>
                 </span>
                 <span className="flex-1 text-left">돋보기</span>
-            </button>                         */}
+            </button>                        
             
         </section>
     )

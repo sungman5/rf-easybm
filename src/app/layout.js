@@ -6,6 +6,7 @@ import Header from './header'
 import AccessibilityButtons from '../components/acce_options'
 import { useState } from 'react'
 import Head from 'next/head';
+import { GlassMagnifier } from '@ricarso/react-image-magnifiers';
 
 
 // export const metadata = {
@@ -22,7 +23,7 @@ export default function RootLayout({ children }) {
   const [zoom, setZoom] = useState(1);  
   //네비게이션 오픈 상태
   const [isNavOpen, setIsNavOpen] = useState(false);
-  //처음으로 기능
+  //처음으로 기능  
 
   return (
     // <html style={{
@@ -40,15 +41,17 @@ export default function RootLayout({ children }) {
         {/* <meta name="viewport" content="width=device-width, initial-scale=1.0" /> */}
       </Head>
       <body id='site-body' className='h-screen font-Pretendard '> 
+        
         <div id="wrapper" className='flex flex-col h-full pt-[56px]'>
           <Header isContrast={isContrast} isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
-          <main aria-hidden={isNavOpen} id='main' className='container flex-1 mx-auto shadow-sm bg-BM-white'>
+          <main aria-hidden={isNavOpen} id='main' className='container flex-1 mx-auto shadow-sm bg-BM-white'>            
             {children}
           </main>
           <Footer isNavOpen={isNavOpen} />
         </div>
       <AccessibilityButtons isContrast={isContrast} setIsContrast={setIsContrast} isNavOpen={isNavOpen} zoom={zoom} setZoom={setZoom} />
       </body>
+      
     </html>
   )
 }

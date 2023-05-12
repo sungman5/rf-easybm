@@ -532,7 +532,7 @@ export const advanced = [
                 { id: 3, item: '주문했던 음식의 리뷰를 쓰고 싶을 때' },
             ]
         },
-        tutorial_title: '주문내역 이렇게 사용하세요!',
+        tutorial_title: '주문 내역 이렇게 사용하세요!',
         content: [
             {
                 id: 1,
@@ -543,8 +543,8 @@ export const advanced = [
             {
                 id: 2,
                 img: '/img/advanced_imgs/adv_id_4_2.png',
-                desc: `'주문내역'을 누른다.`,
-                alt: '마이배민 화면이다. 손가락 모양 아이콘이 주문내역 버튼을 가리키고 있다.'
+                desc: `'주문 내역'을 누른다.`,
+                alt: '마이배민 화면이다. 손가락 모양 아이콘이 주문 내역 버튼을 가리키고 있다.'
             },
             {
                 id: 3,
