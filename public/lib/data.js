@@ -314,13 +314,12 @@ export const advanced = [
         desc:
         {
             title: '배민1',
-            icon: '/img/advanced_imgs/adv_icon_one.png',
+            icon: null,
             icon_alt: '배민1 아이콘',
             body: [
-                { id: 1, item: '배민1(배민원)은 일반 배달보다 빠른 배달입니다.' },
-                { id: 2, item: '일반 배달은 여러 집을 다니기 때문에 시간이 오래 걸립니다.' },
-                { id: 3, item: '하지만 배민1은 한 집만 빠르게 배달합니다.' },
-                { id: 4, item: '빠르게 음식을 먹고 싶을 때 배민1을 사용해보세요.' },
+                { id: 1, item: '배민1(배민원)은 빠른 배달입니다.' },
+                { id: 2, item: '한 번에 한 집만 바로 배달합니다.' },
+                { id: 3, item: '음식을 빨리 배달받아 먹고 싶을 때 배민1을 사용해 보세요.' },                
             ]
         },
         tips:
@@ -328,11 +327,10 @@ export const advanced = [
             title: '이럴 때 사용해봐요!',
             body: [
                 { id: 1, item: '친구들이 놀러왔는데 음식이 없어서 빨리 배달을 시켜야 할 때' },
-                { id: 2, item: '배가 너무 고파서 빨리 오는 음식을 먹고 싶을 때' },
-                { id: 3, item: '방금 만든 음식을 가장 맛있는 상태로 먹고 싶을 때' },
+                { id: 2, item: '배가 너무 고파서 빨리 오는 음식을 먹고 싶을 때' },                
             ]
         },
-        tutorial_title: '배민1 이렇게 사용해보세요!',
+        tutorial_title: '배민1 이렇게 사용하세요!',
         content: [
             {
                 id: 1,
@@ -349,7 +347,7 @@ export const advanced = [
             {
                 id: 3,
                 img: '/img/advanced_imgs/adv_id_0_3.png',
-                desc: `마음에 드는 가게를 선택해서 주문한다.`,
+                desc: `마음에 드는 가게를 선택해서 메뉴를 주문한다.`,
                 alt: '화면에 여러 종류의 치킨 가게가 나와 있다.',
             },
         ]
@@ -377,7 +375,7 @@ export const advanced = [
                 { id: 1, item: '배달팁을 아끼고 싶을 때' },
             ]
         },
-        tutorial_title: '배달팁 낮은 순 이렇게 사용해보세요!',
+        tutorial_title: '배달팁 낮은 순 이렇게 사용하세요!',
         content: [
             {
                 id: 1,
@@ -388,19 +386,19 @@ export const advanced = [
             {
                 id: 2,
                 img: '/img/advanced_imgs/adv_id_1_2.png',
-                desc: `검색 결과에서 ‘기본순’을 누른다.`,
+                desc: `검색 결과에서 배달을 누르고, 기본순을 누른다.`,
                 alt: '샌드위치로 검색한 결과 화면이다. 배달 버튼과 기본순 버튼이 강조되어 있다.'
             },
             {
                 id: 3,
                 img: '/img/advanced_imgs/adv_id_1_3.png',
-                desc: `‘배달팁 낮은 순’을 누르면 배달팁이 낮은 가게부터 볼 수 있다.`,
+                desc: `배달팁 낮은 순을 누르면 배달팁이 낮은 가게부터 볼 수 있다.`,
                 alt: '기본순 버튼을 누른 결과 화면이다. 배달 빠른 순, 배달팁 낮은 순, 주문 많은 순, 별점 높은 순, 가까운 순, 찜 많은 순의 항목이 있고 손가락 모양 아이콘이 배달팁 낮은 순을 가리키고 있다.',
             },
             {
                 id: 4,
                 img: '/img/advanced_imgs/adv_id_1_4.png',
-                desc: `마음에 드는 가게를 선택해서 주문한다.`,
+                desc: `마음에 드는 가게를 선택해서 메뉴를 주문한다.`,
                 alt: '화면에 배달팁 낮은 순으로 정렬된 가게 정보가 담겨 있다.',
             },
         ]
@@ -414,11 +412,13 @@ export const advanced = [
         desc:
         {
             title: '포장',
-            icon: '/img/advanced_imgs/adv_icon_pack.png',
+            icon: null,
             icon_alt: '포장 아이콘',
             body: [
                 { id: 1, item: '포장은 주문한 음식을 직접 가지러 가는 것입니다.' },
                 { id: 2, item: '집 근처 포장할 수 있는 가게를 찾을 수 있습니다.' },
+                { id: 3, item: '포장 주문하면 배달팁이 없습니다.' },
+                { id: 4, item: '가까운 가게는 배달 대신 포장 주문해 보세요.' },
             ]
         },
         tips:
@@ -426,10 +426,10 @@ export const advanced = [
             title: '이럴 때 사용해봐요!',
             body: [
                 { id: 1, item: '집 근처의 포장할 수 있는 가게가 궁금할 때' },
-                { id: 2, item: '외출했다가 돌아오는 길에 음식을 포장하고 싶을 때' },
+                { id: 2, item: '집으로 돌아가는 길에 음식을 포장하고 싶을 때' },
             ]
         },
-        tutorial_title: '포장 이렇게 사용해보세요!',
+        tutorial_title: '포장 이렇게 사용하세요!',
         content: [
             {
                 id: 1,
@@ -440,7 +440,7 @@ export const advanced = [
             {
                 id: 2,
                 img: '/img/advanced_imgs/adv_id_2_2.png',
-                desc: `지도가 나오고, 포장할 수 있는 가까운 가게가 음식 모양으로 표시된다.`,
+                desc: `지도 위에 포장할 수 있는 가까운 가게가 음식 모양으로 표시된다.`,
                 alt: '지도 위에 음식 모양 아이콘이 표시되어 있다.'
             },
             {
@@ -452,7 +452,7 @@ export const advanced = [
             {
                 id: 4,
                 img: '/img/advanced_imgs/adv_id_2_4.png',
-                desc: `지도에서 가게를 더 찾아 볼 수 있다. 마음에 드는 곳을 선택해서 주문한다.`,
+                desc: `지도에서 다른 가게를 더 볼 수 있다. 마음에 드는 곳을 선택해서 메뉴를 주문한다. `,
                 alt: '지도 위에 여러 가지 음식 모양의 아이콘이 표시되어 있다. 손가락 모양 아이콘이 목록보기 버튼을 가리키고 있다.',
             },
         ]
@@ -460,7 +460,7 @@ export const advanced = [
     },
     {
         id: 3,
-        title: '1인분만 주문하고 싶어!',
+        title: '음식을 조금만 주문하고 싶어!',
         cover_img_url: '/img/advanced_imgs/adv_id_3.jpg',
         alt: '한 사람이 TV에서 음식을 먹는 장면을 보며 배달앱을 켜서 1인분의 음식을 주문하려고 하고 있다.',
         desc:
@@ -470,20 +470,20 @@ export const advanced = [
             icon_alt: '1인분 아이콘',
             body: [
                 { id: 1, item: '1인분의 음식을 주문할 수 있는 기능입니다.' },
-                { id: 2, item: '최소주문금액이 적어서 음식 1개만 시켜도 배달해줍니다.' },
-                { id: 3, item: '1인분만 먹고 싶을 때 사용해보세요.' },
+                { id: 2, item: '최소주문금액이 적어서 음식을 조금만 시켜도 배달해 줍니다.' },
+                // { id: 3, item: '1인분만 먹고 싶을 때 사용해보세요.' },
             ]
         },
         tips:
         {
             title: '이럴 때 사용해봐요!',
             body: [
-                { id: 1, item: '혼자서 배달음식을 시켜먹어야 할 때' },
-                { id: 2, item: '시켜먹는 음식의 양이 너무 많을 때' },
-                { id: 3, item: '1인분, 한 그릇의 음식을 먹고 싶을 때' },
+                { id: 1, item: '혼자서 음식을 시켜 먹어야 할 때' },
+                // { id: 2, item: '시켜먹는 음식의 양이 너무 많을 때' },
+                { id: 2, item: '1인분, 한 그릇의 음식을 먹고 싶을 때' },
             ]
         },
-        tutorial_title: '1인분 이렇게 사용해보세요!',
+        tutorial_title: '1인분 이렇게 사용하세요',
         content: [
             {
                 id: 1,
@@ -494,13 +494,13 @@ export const advanced = [
             {
                 id: 2,
                 img: '/img/advanced_imgs/adv_id_3_2.png',
-                desc: `검색 결과에서 ‘1인분’을 누르면 1인분만 배달해주는 가게가 나온다.`,
+                desc: `검색 결과에서 배달을 누르고, 1인분 누른다.`,
                 alt: '샌드위치로 검색한 결과 화면이다. 배달 버튼과 1인분 버튼이 강조되어 있다.'
             },
             {
                 id: 3,
                 img: '/img/advanced_imgs/adv_id_3_3.png',
-                desc: `마음에 드는 가게를 선택해서 주문한다.`,
+                desc: `마음에 드는 가게를 선택해서 메뉴를 주문한다.`,
                 alt: '화면에 1인분 주문 가능한 가게 정보들만 담겨 있다.',
             },
         ]
@@ -517,9 +517,9 @@ export const advanced = [
             icon: null,
             icon_alt: '',
             body: [
-                { id: 1, item: '주문 내역을 보면 예전에 시켰던 곳을 확인할 수 있습니다.' },
-                { id: 2, item: '언제 어떤 가게에서 어떤 음식을 시켰는지 볼 수 있습니다.' },
-                { id: 3, item: '주문 내역을 보고 똑같은 메뉴를 시킬 수도 있고, 가게나 음식의 리뷰를 쓸 수도 있습니다.' },
+                { id: 1, item: '주문 내역을 보면 예전에 주문했던 곳을 확인할 수 있습니다.' },
+                { id: 2, item: '언제 어떤 가게에서 어떤 음식을 주문했는지 볼 수 있습니다.' },
+                { id: 3, item: '주문 내역을 보고 똑같은 메뉴를 주문할 수도 있습니다.' },
             ]
         },
         tips:
