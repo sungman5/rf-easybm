@@ -31,7 +31,7 @@ export default function Header({ isNavOpen, isContrast, setIsNavOpen }) {
     }
 
     return (
-        <header id="site-header" role="banner" className="fixed inset-x-0 top-0 bg-BM-background">
+        <header id="site-header" role="banner" className="fixed inset-x-0 top-0 z-50 bg-BM-background">
             <div className="container flex items-center justify-between px-4 mx-auto shadow-sm h-14 bg-BM-white">
                 <Link href={'/'} >
                     <Image id="site-logo" src={isContrast === false ? '/img/easy-baemin-logo.svg' : '/img/easy-baemin-logo-w.svg'} width={158} height={20} alt="쉬운 배달앱 사용법 로고" />
