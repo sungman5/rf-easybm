@@ -14,7 +14,7 @@ export default function MobileNav({isNavOpen, openNav}){
     const get_page_id = pathname.split('/')[pathname.split('/').length - 1]
     const get_page_cat = pathname.split('/')[pathname.split('/').length - 2]
     return(
-        <nav aria-hidden={!isNavOpen} id="mobile-menu" className="fixed inset-0 z-50 flex-col hidden px-4 py-4 overflow-y-auto translate-x-full bg-BM-white">
+        <nav aria-hidden={!isNavOpen} id="mobile-menu" className="fixed inset-0 z-50 flex flex-col px-4 py-4 overflow-y-auto translate-x-full bg-BM-white">
             <div className="flex justify-between pb-4 border-b border-b-BM-line">
                 <h1 id="mobile-menu-header" className="text-xl text-BM-font font-hanna" aria-label="전체 메뉴">메뉴</h1>
                 <button role="button" onClick={openNav} aria-label="닫기 버튼" aria-expanded={isNavOpen} >
@@ -60,7 +60,7 @@ export default function MobileNav({isNavOpen, openNav}){
                     <li className="lg:py-2"><Link onClick={openNav} className={pathname === '/advanced/7' ? 'block px-2 rounded py-1 font-medium bg-BM-background text-BM-font' : "px-2 rounded block py-1 font-medium text-BM-font"} href={'advanced/7'}>할인 받아서 음식을 주문하고 싶어!</Link></li>
                 </ul>
             </div>
-            <button className="w-32 py-2 mx-auto rounded shadow-md scroll-smooth bg-BM-primary lg:mx-auto text-BM-white" onClick={scrollToTop}>맨 위로</button>
+            {/* <button className="w-32 py-2 mx-auto rounded shadow-md scroll-smooth bg-BM-primary lg:mx-auto text-BM-white" onClick={scrollToTop}>맨 위로</button> */}
         </nav>
     )
 }
