@@ -1,6 +1,8 @@
+
+
 export default function Manual (){
 
     return(
-        '메뉴얼'
+'안녕하세요?'
     )
 }
