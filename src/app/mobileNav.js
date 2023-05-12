@@ -14,7 +14,7 @@ export default function MobileNav({isNavOpen, openNav}){
     const get_page_id = pathname.split('/')[pathname.split('/').length - 1]
     const get_page_cat = pathname.split('/')[pathname.split('/').length - 2]
     return(
-        <nav aria-hidden={!isNavOpen} id="mobile-menu" className="fixed inset-0 z-50 flex flex-col px-4 py-4 overflow-y-auto translate-x-full bg-BM-white">
+        <nav aria-hidden={!isNavOpen} id="mobile-menu" className="fixed inset-0 z-50 flex-col hidden px-4 py-4 overflow-y-auto translate-x-full bg-BM-white">
             <div className="flex justify-between pb-4 border-b border-b-BM-line">
                 <h1 id="mobile-menu-header" className="text-xl text-BM-font font-hanna" aria-label="전체 메뉴">메뉴</h1>
                 <button role="button" onClick={openNav} aria-label="닫기 버튼" aria-expanded={isNavOpen} >

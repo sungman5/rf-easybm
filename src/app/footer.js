@@ -13,7 +13,7 @@ export default function Footer({ isNavOpen }) {
                         </svg>
                     </Link>
                     <p className="mb-1 text-center" >
-                        <Link href="mailto:team_csr@woowahan.com" type="email">사이트 이용에 불편한 점은 메일로 알려 주세요. team_csr@woowahan.com</Link>
+                        <Link href="mailto:team_csr@woowahan.com" type="email">사이트 이용 및 쉬운 배달앱 사용법과 관련된 의견은 메일로 알려주세요 team_csr@woowahan.com</Link>
                     </p>
                 </div>
 
