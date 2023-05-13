@@ -47,21 +47,69 @@ export default function AccessibilityButtons({ zoom, isNavOpen, isContrast, setI
         }
     }, [isContrast, setIsContrast])
 
-    const [screenShot, setScreenShot] = useState(null);
-
+    /******* 0. 사전 셋팅 ***************/
+    const [screenShot, setScreenShot] = useState(null); // 생성된 이미지 주소 저장
+    const [activeMag, setIsActiveMag] = useState(false); //돋보기 활성 상태
+    
+    /** 1. 함수 시작 : 화면 스크린 샷 */
     async function captureScreenshot() {
+        setIsActiveMag(true)
+        console.log('캡쳐를 시작합니다.')
         const canvas = await html2canvas(document.body);
+        console.log('주소를 생성합니다.')
         const dataUrl = canvas.toDataURL();
         console.log('URL is here. ::', dataUrl);
 
-        setScreenShot(dataUrl);
-        magnify("myimage", 3);
+        console.log('생성된 주소를 screenShot에 할당합니다.')
+        await setScreenShot(dataUrl);
+        
     }
 
+    /** 2. 생성된 주소를 useEffect를 이용해 확인하고, 즉시 돔 생성*/
+    useEffect(() => {
+        console.log(activeMag)
+        if(activeMag){
+            console.log('할당 결과', screenShot)
+            magnify("myimage", 3);
+        }
+    }, [screenShot, activeMag])
+
+
     function magnify(imgID, zoom) {
+        let backDrop, magniContainer, myImage
         var img, glass, w, h, bw;
         img = document.getElementById(imgID);
+        const place = document.getElementById('mobile-option-set')
+        /** create magnifier frame */
+        backDrop = document.createElement('div');
+        magniContainer = document.createElement('div');
+        myImage = document.createElement('img');
+        
+        console.log('스크린샷 주소 상태를 확인합니다.', screenShot)
 
+        backDrop.setAttribute('id', 'backdrop');
+        magniContainer.setAttribute('id', 'img-magnifier-container');
+        myImage.setAttribute('id', 'myimage');
+        myImage.setAttribute('width', '100%');
+        myImage.setAttribute('height', '100%');
+        myImage.setAttribute('alt', '');
+        myImage.setAttribute('src', screenShot);
+
+        magniContainer.classList.add(
+            'fixed',
+            'inset-0',
+            'z-[99999]',
+        )
+
+        place.append(backDrop);
+        backDrop.append(magniContainer);
+        magniContainer.append(myImage);
+
+        // myImage.appendChild(magniContainer);
+        // magniContainer.appendChild(backDrop);
+        // backDrop.appendChild(document.body)       
+
+        
         /*create magnifier glass:*/
         glass = document.createElement("DIV");
         glass.setAttribute("id", "img-magnifier-glass");
@@ -77,7 +125,7 @@ export default function AccessibilityButtons({ zoom, isNavOpen, isContrast, setI
         )
 
         /*insert magnifier glass:*/
-        img.parentElement.insertBefore(glass, img);
+        myImage.parentElement.insertBefore(glass, myImage);
 
         /*set background properties for the magnifier glass:*/
         bw = 3;
@@ -85,26 +133,36 @@ export default function AccessibilityButtons({ zoom, isNavOpen, isContrast, setI
         h = glass.offsetHeight / 2;
 
         /*setup magnifier once image is loaded*/
-        img.onload = function () {
-            glass.style.backgroundImage = "url('" + img.src + "')";
+        myImage.onload = function () {
+            glass.style.backgroundImage = "url('" + myImage.src + "')";
             glass.style.backgroundRepeat = "no-repeat";
-            glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+            glass.style.backgroundSize = (myImage.width * zoom) + "px " + (myImage.height * zoom) + "px";
             glass.style.backgroundColor = "#fff"; // or any color you prefer
         }
 
-        const magniArea = document.getElementById('magni-area')
 
         /*execute a function when someone moves the magnifier glass over the image:*/
         glass.addEventListener("mousemove", moveMagnifier);
-        img.addEventListener("mousemove", moveMagnifier);
+        myImage.addEventListener("mousemove", moveMagnifier);
+
+        glass.addEventListener("click", removeMagnifier);
+        myImage.addEventListener("click", removeMagnifier);
 
         /*and also for touch screens:*/
         glass.addEventListener("touchmove", moveMagnifier);
-        img.addEventListener("touchmove", moveMagnifier);
+        myImage.addEventListener("touchmove", moveMagnifier);
 
-        glass.addEventListener("click", function () {
-            magniArea.style.display = "none";
-        });
+        function removeMagnifier(e) {
+            e.preventDefault();
+            // Remove magnifier glass from the DOM
+            glass.remove();
+            let everyFrame = document.querySelectorAll('#backdrop');
+            for (let i = 0; i < everyFrame.length; i++) {
+                everyFrame[i].remove();
+            }
+            // Set activeMag state to false
+            setIsActiveMag(false);
+        }
 
         function moveMagnifier(e) {
             var pos, x, y;
@@ -115,9 +173,9 @@ export default function AccessibilityButtons({ zoom, isNavOpen, isContrast, setI
             x = pos.x;
             y = pos.y;
             /*prevent the magnifier glass from being positioned outside the image:*/
-            if (x > img.width - (w / zoom)) { x = img.width - (w / zoom); }
+            if (x > myImage.width - (w / zoom)) { x = myImage.width - (w / zoom); }
             if (x < w / zoom) { x = w / zoom; }
-            if (y > img.height - (h / zoom)) { y = img.height - (h / zoom); }
+            if (y > myImage.height - (h / zoom)) { y = myImage.height - (h / zoom); }
             if (y < h / zoom) { y = h / zoom; }
             /*set the position of the magnifier glass:*/
             glass.style.left = (x - w) + "px";
@@ -129,7 +187,7 @@ export default function AccessibilityButtons({ zoom, isNavOpen, isContrast, setI
             var a, x = 0, y = 0;
             e = e || window.event;
             /*get the x and y positions of the image:*/
-            a = img.getBoundingClientRect();
+            a = myImage.getBoundingClientRect();
             /*calculate the cursor's x and y coordinates, relative to the image:*/
             x = e.pageX - a.left;
             y = e.pageY - a.top;
@@ -184,15 +242,6 @@ export default function AccessibilityButtons({ zoom, isNavOpen, isContrast, setI
                 </button>
 
             </section>
-            <>
-
-                <div id="magni-area">
-                    <div id="img-magnifier-container" class="fixed inset-0">
-                        <img id="myimage" src={screenShot} width="100%" height="100%" alt="돋보기" />
-                    </div>
-                </div>
-            </>
-
         </>
     )
 }
