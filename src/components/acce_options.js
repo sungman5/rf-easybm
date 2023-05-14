@@ -53,6 +53,10 @@ export default function AccessibilityButtons({ zoom, isNavOpen, isContrast, setI
     
     /** 1. 함수 시작 : 화면 스크린 샷 */
     async function captureScreenshot() {
+        // 돋보기 시 원래 화면 스크롤 금지
+        setIsActiveMag(true);
+        // document.body.style.overflow = 'hidden'; // Disable scroll on body
+        
         setIsActiveMag(true)
         console.log('캡쳐를 시작합니다.')
         const canvas = await html2canvas(document.body);
@@ -140,6 +144,9 @@ export default function AccessibilityButtons({ zoom, isNavOpen, isContrast, setI
             glass.style.backgroundColor = "#fff"; // or any color you prefer
         }
 
+        // 스크롤
+        magniContainer.style.overflowY = 'auto'; // Enable scroll on magnifier
+
 
         /*execute a function when someone moves the magnifier glass over the image:*/
         glass.addEventListener("mousemove", moveMagnifier);
@@ -162,6 +169,8 @@ export default function AccessibilityButtons({ zoom, isNavOpen, isContrast, setI
             }
             // Set activeMag state to false
             setIsActiveMag(false);
+            // 스크롤
+            // document.body.style.overflow = 'auto'; // Enable scroll on body
         }
 
         function moveMagnifier(e) {
@@ -232,7 +241,7 @@ export default function AccessibilityButtons({ zoom, isNavOpen, isContrast, setI
                     <span className="flex-1 text-left">고대비</span>
                 </button>
 
-                <button onClick={captureScreenshot} type="button" aria-label="돋보기" className="flex items-center gap-2 w-28">
+                <button onClick={captureScreenshot} type="button" aria-label="돋보기" className="items-center hidden gap-2 lg:flex w-28">
                     <span aria-hidden={true} className="flex items-center justify-center w-12 h-12 bg-BM-tertiary">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
