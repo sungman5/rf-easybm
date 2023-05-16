@@ -18,7 +18,7 @@ export default function Basic_dictionary() {
 
     return (
         <article className="h-full leading-relaxed">
-            <h1 className="mb-4 text-2xl font-hanna md:text-3xl lg:text-5xl lg:mb-10">배달앱 용어사전</h1>
+            <h1 className="mb-4 text-2xl font-hanna md:text-3xl lg:text-5xl lg:mb-10">배달앱 용어 사전</h1>
             <ul>
                 <li className="py-4 border-b">
                     <h3 className="mb-2 text-xl font-hanna md:text-2xl text-BM-primary">배달팁</h3>

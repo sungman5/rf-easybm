@@ -32,7 +32,7 @@ export default function MobileNav({isNavOpen, openNav}){
             <div className="py-4 border-b border-b-BM-line lg:text-center lg:text-lg">
                 <h2 className="mb-2 text-xl text-BM-primary font-hanna">준비하기</h2>
                 <ul>
-                    <li className="lg:py-2"><Link onClick={openNav} className={pathname === '/basic/0' ? "block px-2 rounded py-1 font-medium bg-BM-background text-BM-font" : "block px-2 rounded py-1 font-medium text-BM-font"} href={'basic/0'}>배달앱 용어사전</Link></li>
+                    <li className="lg:py-2"><Link onClick={openNav} className={pathname === '/basic/0' ? "block px-2 rounded py-1 font-medium bg-BM-background text-BM-font" : "block px-2 rounded py-1 font-medium text-BM-font"} href={'basic/0'}>배달앱 용어 사전</Link></li>
                     <li className="lg:py-2"><Link onClick={openNav} className={pathname === '/basic/1' ? "block px-2 rounded py-1 font-medium bg-BM-background text-BM-font" : "block px-2 rounded py-1 font-medium text-BM-font"} href={'basic/1'}>배달앱 설치하기</Link></li>
                     <li className="lg:py-2"><Link onClick={openNav} className={pathname === '/basic/2' ? "block px-2 rounded py-1 font-medium bg-BM-background text-BM-font" : "block px-2 rounded py-1 font-medium text-BM-font"} href={'basic/2'}>주소 설정하기</Link></li>
                     <li className="lg:py-2"><Link onClick={openNav} className={pathname === '/basic/3' ? "block px-2 rounded py-1 font-medium bg-BM-background text-BM-font" : "block px-2 rounded py-1 font-medium text-BM-font"} href={'basic/3'}>회원가입 하기</Link></li>
