@@ -1,14 +1,15 @@
 'use client';
 
 import Image from "next/image";
+import TailOption from "./tailOptionBtn";
 
 
 export default function UnderstandFirstPage(){
     return (
-        <section className="h-full leading-relaxed">
+        <section className="flex flex-col items-center h-full leading-relaxed ">
             <h1 className="mb-4 text-2xl md:text-3xl lg:text-5xl font-hanna lg:mb-16">첫 화면 살펴보기</h1>
             <Image width={335} height={591} className="mb-5 shadow-lg rounded-xl" src="/img/basic_imgs/first-page.jpg" alt="배달의민족 첫 화면이다. 가장 왼쪽 상단에 영등포구 문래북로 116, 주소가 있다. 화면 가장 오른쪽 상단에 사각형 네 개 아이콘 전체 서비스, 종 모양의 아이콘은 알림센터, 웃고 있는 얼굴은 마이 배민, 돋보기 빈칸은 검색이다. 그 아래 차례로 배민원 아이콘, 빠른 배달, 배달 아이콘, 배달, 포장 아이콘, 포장 비마트 아이콘이 강조되어 있다." />
-            <ul>
+            <ul className="lg:mb-8">
                 <li className="py-3 border-b md:text-lg">
                     <p className="mb-1 text-lg md:py-2 md:text-2xl font-hanna text-BMprimary">1. 주소</p>
                     <p>배달받을 곳을 주문할 때 정할 수 있다. 우리 집, 회사 등 자주 사용하는 주소를 따로 저장할 수 있다.</p>
@@ -49,6 +50,7 @@ export default function UnderstandFirstPage(){
                     <p>마트에서 파는 생활용품을 음식처럼 주문하고 배달받을 수 있다.</p>
                 </li>
             </ul>
+            <TailOption />
         </section>
     )
 }

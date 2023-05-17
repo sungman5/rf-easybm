@@ -4,7 +4,7 @@ export default function Footer({ isNavOpen }) {
     const footerTabIndx = 3;
 
     return (
-        <footer id='site-footer' aria-label="푸터" className="py-6 pb-[80px] lg:pb-6 bg-BM-background">
+        <footer id='site-footer' aria-label="푸터" className="py-6 pb-[88px] lg:pb-6 bg-BM-background">
             <div className="container flex flex-col justify-center gap-1 px-4 py-1 mx-auto text-sm font-normal lg:flex-row lg:justify-between lg:font-semibold bg-BM-background">
                 <div className="flex flex-col gap-1 lg:items-center lg:flex-row">
                     <Link className="mb-1 " href="mailto:team_csr@woowahan.com" type="email">

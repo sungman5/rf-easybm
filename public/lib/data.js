@@ -612,8 +612,8 @@ export const advanced = [
             icon: null,
             icon_alt: 'B마트 아이콘',
             body: [
-                { id: 1, item: '<p>B마트<span aria-hidden="true">(비마트)</span>는 마트에서 파는 물건을 배달해주는 서비스입니다.</p>' },
-                { id: 2, item: '<p>음식 재료, 세제, 화장지 등 급하게 필요한 물건을 주문하고 배달 음식처럼 빠르게 받을 수 있습니다.</p><p className="caption lg:text-left lg:text-lg lg:font-normal lg:text-BM-gray200">사는 곳에 따라서 B마트를 사용할 수 없는 곳도 있습니다.</p>' },                
+                { id: 1, item: 'B마트<span aria-hidden="true">(비마트)</span>는 마트에서 파는 물건을 배달해주는 서비스입니다.' },
+                { id: 2, item: '음식 재료, 세제, 화장지 등 급하게 필요한 물건을 주문하고 배달 음식처럼 빠르게 받을 수 있습니다. <span className="block text-left caption lg:text-left lg:text-lg lg:font-normal lg:text-BM-gray200">사는 곳에 따라서 B마트를 사용할 수 없는 곳도 있습니다.' },                
             ]
         },
         tips:

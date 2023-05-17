@@ -9,39 +9,42 @@ import MobileNav from "./mobileNav";
 
 export default function Header({ isNavOpen, isContrast, setIsNavOpen }) {
 
-    const openNav = () => {
+    // const openNav = () => {
     
-        if (!isNavOpen) {
-            gsap.to('#mobile-menu', { x: '100%', duration: 0.2 });
-            setIsNavOpen(true);
-        } else {
-            gsap.to('#mobile-menu', { x: '0%', duration: 0.2 });
-            setIsNavOpen(false);
-        }
-    };
+    //     if (!isNavOpen) {
+    //         gsap.to('#mobile-menu', { x: '100%', duration: 0.2 });
+    //         setIsNavOpen(true);
+    //     } else {
+    //         gsap.to('#mobile-menu', { x: '0%', duration: 0.2 });
+    //         setIsNavOpen(false);
+    //     }
+    // };
+    const openNav = () =>{
+        setIsNavOpen(!isNavOpen)
+    }
 
-    useEffect(() => {
-        const main = document.getElementById('main')
-        const nav = document.getElementById('mobile-menu')
-        console.log('이펙트 안에서', isNavOpen)
+    // useEffect(() => {
+    //     const main = document.getElementById('main')
+    //     const nav = document.getElementById('mobile-menu')
+    //     console.log('이펙트 안에서', isNavOpen)
 
-        if (!isNavOpen) {
-            gsap.to('#mobile-menu', { x: '100%', duration: 0.2 });
-            // main.style.display = 'block'
-            // nav.style.display = 'none'
-            main.setAttributeNS(null, 'aria-hidden', 'true');
-        } else {
-            gsap.to('#mobile-menu', { x: '0%', duration: 0.2 });
-            // main.style.display = 'none'
-            // nav.style.display = 'block'
-            main.setAttributeNS(null, 'aria-hidden', 'false');
-        }
-    }, [isNavOpen])
+    //     if (!isNavOpen) {
+    //         gsap.to('#mobile-menu', { x: '100%', duration: 0.2 });
+    //         // main.style.display = 'block'
+    //         // nav.style.display = 'none'
+    //         main.setAttributeNS(null, 'aria-hidden', 'true');
+    //     } else {
+    //         gsap.to('#mobile-menu', { x: '0%', duration: 0.2 });
+    //         // main.style.display = 'none'
+    //         // nav.style.display = 'block'
+    //         main.setAttributeNS(null, 'aria-hidden', 'false');
+    //     }
+    // }, [isNavOpen])
 
 
     return (
         <>
-            <header id="site-header" role="banner" className="z-50 bg-BM-background">
+            <header id="site-header" role="banner" className="fixed inset-x-0 top-0 z-50 bg-BM-background">
                 <div className="container flex items-center justify-between px-4 mx-auto shadow-sm h-14 bg-BM-white">
                     <Link href={'/'} >
                         <Image id="site-logo" src={isContrast === false ? '/img/easy-baemin-logo.svg' : '/img/easy-baemin-logo-w.svg'} width={158} height={20} alt="쉬운 배달앱 사용법 로고" />

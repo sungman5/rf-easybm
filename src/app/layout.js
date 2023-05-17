@@ -36,11 +36,10 @@ export default function RootLayout({ children }) {
         <meta name='keywords' content='접근성을 고려한 배달앱 설명 사이트' />
       </Head>
 
-      <body id='site-body' className='h-screen font-Pretendard '>
-
-        <div id="wrapper" className='container relative flex flex-col h-full mx-auto overflow-x-hidden'>
+      <body id='site-body' className='h-screen font-Pretendard '>        
+        <div id="wrapper" className='container flex flex-col min-h-full mx-auto overflow-x-hidden'>
           <Header isContrast={isContrast} isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
-          <main id='main' className='container flex-1 mx-auto shadow-sm bg-BM-white'>
+          <main id='main' className='container pt-[56px] flex-1 mx-auto shadow-sm bg-BM-white'>
             {children}
           </main>
           <Footer isNavOpen={isNavOpen} />

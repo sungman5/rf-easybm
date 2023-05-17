@@ -13,7 +13,7 @@ export default function MobileNav({ isNavOpen, openNav }) {
 
 
     return (
-        <nav aria-hidden={!isNavOpen} style={{ transform: 'translate(100%, 0)' }} id="mobile-menu" className="absolute inset-0 z-50 flex flex-col px-4 py-4 overflow-y-auto bg-BM-white">
+        <nav aria-hidden={!isNavOpen} id="mobile-menu" className={`z-50 flex flex-col px-4 py-4 bg-BM-white fixed inset-0 transform transition-transform ease-in-out duration-300 overflow-y-auto ${isNavOpen ? 'translate-x-0' : 'translate-x-full'}`}>
             <div className="flex justify-between pb-4 border-b border-b-BM-line">
                 <h1 tabIndex={isNavOpen === false ? -1 : 0} id="mobile-menu-header" className="text-xl text-BM-font font-hanna" aria-label="전체 메뉴">메뉴</h1>
                 <button tabIndex={isNavOpen === false ? -1 : 0} className="flex items-center gap-1 font-hanna" role="button" onClick={openNav} aria-label="닫기 버튼, 클릭하면 메뉴가 닫힙니다." aria-expanded={!isNavOpen} >
