@@ -6,6 +6,8 @@ import Header from './header'
 import AccessibilityButtons from '../components/acce_options'
 import { useState } from 'react'
 import Head from 'next/head';
+import { Analytics } from '@vercel/analytics/react';
+
 
 
 // export const metadata = {
@@ -42,6 +44,7 @@ export default function RootLayout({ children }) {
           <Header isContrast={isContrast} isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
           <main id='main' className='container flex flex-col flex-grow pt-[56px] mx-auto shadow-sm bg-BM-white'>
             {children}
+            <Analytics />
           </main>
           <Footer isNavOpen={isNavOpen} />
         </div>
