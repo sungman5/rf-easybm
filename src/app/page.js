@@ -19,7 +19,7 @@ import React, { useEffect, useState } from 'react';
 
 
 export default function Home() {
-  const {isOpened, setIsOpened} = useStore();
+  // const {isOpened, setIsOpened} = useStore();
   console.log('함수', setIsOpened)
   console.log('흡', isOpened)
   //배민맨 입장
