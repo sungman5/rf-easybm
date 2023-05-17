@@ -20,8 +20,8 @@ import React, { useEffect, useState } from 'react';
 
 export default function Home() {
   // const {isOpened, setIsOpened} = useStore();
-  console.log('함수', setIsOpened)
-  console.log('흡', isOpened)
+  // console.log('함수', setIsOpened)
+  // console.log('흡', isOpened)
   //배민맨 입장
   const enterance = () => {
     gsap.from('#bm-character', { opacity: 0, duration: 1, autoAlpha: 0 })
