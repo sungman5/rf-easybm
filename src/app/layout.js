@@ -28,6 +28,7 @@ export default function RootLayout({ children }) {
 
   return (
 
+    // <html style={{ zoom: zoom, }} className='h-full overflow:auto text-BM-font bg-BM-background' lang="ko">
     <html style={{ zoom: zoom, }} className='text-BM-font bg-BM-background' lang="ko">
       <Head>
         <title>쉬운 배달앱 사용법</title>
@@ -36,10 +37,10 @@ export default function RootLayout({ children }) {
         <meta name='keywords' content='접근성을 고려한 배달앱 설명 사이트' />
       </Head>
 
-      <body id='site-body' className='h-screen font-Pretendard '>        
-        <div id="wrapper" className='container flex flex-col min-h-full mx-auto overflow-x-hidden'>
+      <body id='site-body' className='flex flex-col min-h-screen font-Pretendard '>        
+        <div id="wrapper" className='container flex flex-col flex-1 mx-auto overflow-x-hidden'>
           <Header isContrast={isContrast} isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
-          <main id='main' className='container pt-[56px] flex-1 mx-auto shadow-sm bg-BM-white'>
+          <main id='main' className='container flex flex-col flex-grow pt-[56px] mx-auto shadow-sm bg-BM-white'>
             {children}
           </main>
           <Footer isNavOpen={isNavOpen} />
