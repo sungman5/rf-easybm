@@ -1,6 +1,6 @@
 'use client';
 
-import useStore from '@/components/zustand_list';
+// import useStore from '@/components/zustand_list';
 import { gsap } from 'gsap';
 /**
  * xs 375px @media (min-width: 375px) { ... }
@@ -30,7 +30,7 @@ export default function Home() {
     window.addEventListener('DOMContentLoaded', enterance())
   }, [])
 
-  const [isNavOpen, setIsNavOpen] = useState(false);
+  // const [isNavOpen, setIsNavOpen] = useState(false);
   
   return (
     <>
