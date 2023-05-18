@@ -131,7 +131,7 @@ export default function Basic_dictionary() {
                         <p tabIndex={0} className="text-base text-BMgray500">“옵션으로 치즈 토핑을 추가해서 치즈 닭갈비를 먹어야지.”</p>
                     </div>
                 </li>
-                <li className="py-4 border-b">
+                <li className="py-4 mb-8 border-b">
                     <h3 tabIndex={0} className="mb-2 text-xl font-hanna text-BM-primary md:text-2xl">사이드 메뉴</h3>
                     <p tabIndex={0} className="md:leading-relaxed md:text-lg md:mb-2">식사 메뉴와 같이 먹으면 좋은 음식. 식사 메뉴보다 양이 적은 편이다. 햄버거 세트의 감자튀김, 짜장면의 군만두가 사이드 메뉴다.</p>
                     <div className="flex font-medium text-BM-primary">
@@ -162,11 +162,11 @@ export default function Basic_dictionary() {
                 </li> */}
             
             
+            <div className="flex justify-between w-full">
+                <p></p>
+                <Link className="px-3 py-2 text-sm text-white rounded-full shadow-sm bg-BM-primary" href={'/basic/1'}>다음으로 👉</Link>
+            </div>
             </ul>
-                <div className="flex justify-between w-full">
-                    <p></p>
-                    <Link className="px-3 py-2 text-sm text-white rounded-full shadow-sm bg-BM-primary" href={'/basic/1'}>다음으로 👉</Link>
-                </div>
         </article>
     )
 }
