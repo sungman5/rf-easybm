@@ -209,7 +209,7 @@ export default function AccessibilityButtons({ zoom, isNavOpen, isContrast, setI
 
     return (
         <>
-            <section id="mobile-option-set" className="fixed border-top lg:border-top-0 bottom-0 right-0 lg:bottom-auto lg:left-auto left-0 lg:right-0  flex lg:flex-col shadow-md lg:top-1/3 z-[9999]lg:w-28 bg-BM-white">
+            <section id="mobile-option-set" className="fixed lg:border-t-0 border-t border-t-BM-white lg:border-top-0 bottom-0 right-0 lg:bottom-auto lg:left-auto left-0 lg:right-0  flex lg:flex-col shadow-md lg:top-1/3 z-[9999]lg:w-28 bg-BM-white">
                 <button onClick={increaseZoom} aria-label="화면 확대" type="button" className="items-center flex-1 gap-2 lg:flex lg:w-28">
                     <span className="flex items-center justify-center w-full h-12 lg:w-12 bg-BM-tertiary">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
