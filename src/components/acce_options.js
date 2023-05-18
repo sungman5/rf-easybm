@@ -5,19 +5,22 @@ import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 // import setMagnifier from "../../public/lib/scripts/magnifier";
 
-export default function AccessibilityButtons({ zoom, isNavOpen, isContrast, setIsContrast, setZoom }) {
+export default function AccessibilityButtons({ zoom, isNavOpen, isContrast, setIsContrast, setZoom, setIsFontSize, isFontSize }) {
 
     //줌
     const increaseZoom = () => {
         setZoom((prevZoom) => prevZoom + 0.1);
+        setIsFontSize(isFontSize + 2)
     };
 
     const decreaseZoom = () => {
         setZoom((prevZoom) => prevZoom - 0.1);
+        setIsFontSize(isFontSize - 2)
     };
-
+    
     const zoomInit = () => {
         setZoom(1);
+        setIsFontSize(16)
     }
 
 

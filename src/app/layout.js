@@ -18,7 +18,8 @@ import { Analytics } from '@vercel/analytics/react';
 
 export default function RootLayout({ children }) {
 
-
+//in&decrease font
+const [isFontSize, setIsFontSize] = useState(16)
   //change color
   const [isContrast, setIsContrast] = useState(false);
   // 확대 축소 상태
@@ -31,7 +32,7 @@ export default function RootLayout({ children }) {
   return (
 
     // <html style={{ zoom: zoom, }} className='h-full overflow:auto text-BM-font bg-BM-background' lang="ko">
-    <html style={{ zoom: zoom, }} className='text-BM-font bg-BM-background' lang="ko">
+    <html style={{ zoom: zoom, fontSize : `${isFontSize}px` }} className='text-BM-font bg-BM-background' lang="ko">
       <Head>
         <title>쉬운 배달앱 사용법</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -48,7 +49,7 @@ export default function RootLayout({ children }) {
           </main>
           <Footer isNavOpen={isNavOpen} />
         </div>
-        <AccessibilityButtons isContrast={isContrast} setIsContrast={setIsContrast} isNavOpen={isNavOpen} zoom={zoom} setZoom={setZoom} />
+        <AccessibilityButtons isContrast={isContrast} setIsContrast={setIsContrast} isNavOpen={isNavOpen} zoom={zoom} isFontSize={isFontSize} setIsFontSize={setIsFontSize} setZoom={setZoom} />
       </body>
 
     </html>
