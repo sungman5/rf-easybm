@@ -22,7 +22,7 @@ export default function UnderstandFirstPage(){
                     <p tabIndex={0}>배달받을 곳을 주문할 때 정할 수 있다. 우리 집, 회사 등 자주 사용하는 주소를 따로 저장할 수 있다.</p>
                 </li>
                 <li className="py-3 border-b md:text-lg">
-                    <p tabIndex={0} className="mb-1 text-lg md:py-2 md:text-2xl font-hanna text-BMprimary">2. 전체 서비스</p>
+                    <p tabIndex={0} className="mb-1 text-lg md:py-2 md:text-2xl font-hanna text-BMprimary">2. 서비스 전체보기</p>
                     <p tabIndex={0}>배달의민족 앱에서 이용할 수 있는 모든 서비스를 볼 수 있다.</p>
                 </li>
                 <li className="py-3 border-b md:text-lg">
@@ -30,31 +30,32 @@ export default function UnderstandFirstPage(){
                     <p tabIndex={0}>여러 가지 알림을 확인할 수 있다. 빨간 점이 있다면 새로운 알림이 도착했다는 뜻이다.</p>
                 </li>
                 <li className="py-3 border-b md:text-lg">
-                    <p tabIndex={0} className="mb-1 text-lg md:py-2 md:text-2xl font-hanna text-BMprimary">4. My배민(마이 배민)</p>
-                    <p tabIndex={0}>내가 찜한 가게, 내 주문 내역 등 나와 관련된 정보를 볼 수 있다.</p>
-                </li>
-                <li className="py-3 border-b md:text-lg">
-                    <p tabIndex={0} className="mb-1 text-lg md:py-2 md:text-2xl font-hanna text-BMprimary">5. 검색</p>
+                    <p tabIndex={0} className="mb-1 text-lg md:py-2 md:text-2xl font-hanna text-BMprimary">4. 검색</p>
                     <p tabIndex={0}>원하는 메뉴나 가게를 검색해 바로 찾을 수 있다.</p>
                 </li>
                 <li className="py-3 border-b md:text-lg">
-                    <p tabIndex={0} className="mb-1 text-lg md:py-2 md:text-2xl font-hanna text-BMprimary">6. 빠른 배달</p>
-                    <p tabIndex={0}>오른쪽의 배달보다 빠르게 받을 수 있다.</p>
-                    <p tabIndex={0} className="text-sm font-medium text-BM-gray200">지역에 따라 배민1과 배달의 버튼 위치가 다르다. 배민1이 안 보이는 곳도 있다.
-                    </p>
-                </li>
-                <li className="py-3 border-b md:text-lg">
-                    <p tabIndex={0} className="mb-1 text-lg md:py-2 md:text-2xl font-hanna text-BMprimary">7. 배달시키기</p>
+                    <p tabIndex={0} className="mb-1 text-lg md:py-2 md:text-2xl font-hanna text-BMprimary">5. 배달</p>
                     <p tabIndex={0}>일반 배달을 주문할 수 있다.</p>
                 </li>
+                <li className="py-3 border-b md:text-lg">
+                    <p tabIndex={0} className="mb-1 text-lg md:py-2 md:text-2xl font-hanna text-BMprimary">6. B마트(비마트)</p>
+                    <p tabIndex={0}>마트에서 파는 생활용품을 음식처럼 주문하고 배달받을 수 있다.</p>
+                </li>
+                <li className="py-3 border-b md:text-lg">
+                    <p tabIndex={0} className="mb-1 text-lg md:py-2 md:text-2xl font-hanna text-BMprimary">7. 알뜰/한집배달</p>
+                    <p tabIndex={0}>오른쪽의 배달보다 빠르게 받을 수 있다.</p>
+                    <p tabIndex={0} className="text-sm font-medium text-BM-gray200">지역에 따라 배민1과 배달의 버튼 위치가 다르다. 배민1이 안 보이는 곳도 있다.
+                    </p>                    
+                </li>                                
                 <li className="py-3 border-b md:text-lg">
                     <p tabIndex={0} className="mb-1 text-lg md:py-2 md:text-2xl font-hanna text-BMprimary">8. 포장</p>
                     <p tabIndex={0}>주문한 음식을 직접 가지러 가는 것이다. 배달팁이 들지 않는다.</p>
                 </li>
                 <li className="py-3 mb-8 border-b md:text-lg">
-                    <p tabIndex={0} className="mb-1 text-lg md:py-2 md:text-2xl font-hanna text-BMprimary">9. B마트(비마트)</p>
-                    <p tabIndex={0}>마트에서 파는 생활용품을 음식처럼 주문하고 배달받을 수 있다.</p>
+                    <p tabIndex={0} className="mb-1 text-lg md:py-2 md:text-2xl font-hanna text-BMprimary">9. My배민(마이 배민)</p>
+                    <p tabIndex={0}>내가 찜한 가게, 내 주문 내역 등 나와 관련된 정보를 볼 수 있다.</p>
                 </li>
+               
                 <div className="flex justify-between w-full">
                     <Link className="px-3 py-2 text-sm text-white rounded-full shadow-sm bg-BM-primary" href={`/basic/3`}>👈 이전으로</Link>
                     <Link className="px-3 py-2 text-sm text-white rounded-full shadow-sm bg-BM-primary" href={`/usage/0`}>다음으로 👉</Link>

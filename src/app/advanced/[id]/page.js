@@ -60,7 +60,7 @@ export default function Advanced_detail(){
                                 <div className="flex flex-col justify-center mb-6 border-b lg:py-4 lg:gap-8 lg:items-start lg:flex-row" key={element.id}>
                                     <div className="mb-2 h-fit lg:flex lg:pt-4 lg:gap-4">
                                         <p tabIndex={0} className="flex items-center justify-center w-6 h-6 mx-auto mt-1 mb-3 text-lg text-center rounded-full bg-BM-primary text-BM-white">{element.id}</p>
-                                        <div className='text-lg font-medium text-center lg:p-0 lg:leading-relaxed lg:w-80 lg:text-left lg:text-xl md:px-8 md:text-sm '><p tabIndex={0}>{HTMLReactParser(element.desc)}</p></div>
+                                        <div className='text-lg font-medium text-center lg:p-0 lg:leading-relaxed lg:w-80 lg:text-left lg:text-xl md:px-8 md:text-sm '><div tabIndex={0}>{HTMLReactParser(element.desc)}</div></div>
                                     </div>
                                     <Image tabIndex={0} className="w-56 mx-auto md:mx-auto md:mb-6 lg:m-0 lg:w-80" src={element.img} width={600} height={1060} alt={element.alt} />
                                 </div>
