@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function TailOption(){
 
     const scrollToTop =()=>{
-        console.log('클릭!')
+        // console.log('클릭!')
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 

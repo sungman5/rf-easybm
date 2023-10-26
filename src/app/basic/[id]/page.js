@@ -24,7 +24,7 @@ export default function Basic_detail() {
   const pathname = usePathname();
   const get_page_id = pathname.split("/")[pathname.split("/").length - 1];
   const get_page_cat = pathname.split("/")[pathname.split("/").length - 2];
-  console.log("페이지 아이디", get_page_id);
+//   console.log("페이지 아이디", get_page_id);
   const showPage = () => {
     if (get_page_id === "0") {
       // 배달앱 용어사전
@@ -38,10 +38,10 @@ export default function Basic_detail() {
   const [isActivePop, setIsActivePop] = useState(false);
   const showTermPop = () => {
     if (isActivePop === false) {
-      console.log("열림!");
+    //   console.log("열림!");
       setIsActivePop(true);
     } else {
-      console.log("닫힘!");
+    //   console.log("닫힘!");
       setIsActivePop(false);
     }
   };

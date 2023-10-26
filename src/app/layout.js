@@ -26,7 +26,7 @@ const [isFontSize, setIsFontSize] = useState(16)
   const [zoom, setZoom] = useState(1);
   //네비게이션 오픈 상태
   const [isNavOpen, setIsNavOpen] = useState(false);
-  console.log('메뉴 열렸(true)는가?', isNavOpen)
+  // console.log('메뉴 열렸(true)는가?', isNavOpen)
   //처음으로 기능  
 
   return (

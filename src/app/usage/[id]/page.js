@@ -11,7 +11,7 @@ import Link from "next/link";
 export default function Usage_detail() {
     const pathname = usePathname();
     const get_page_id = pathname.split('/')[pathname.split('/').length - 1]
-    console.log(pathname)
+    // console.log(pathname)
 
     const showUsagePage = () => {
         if (get_page_id === '0') {

@@ -15,7 +15,7 @@ import { usage } from "../../public/lib/data";
 export default function Usage_0_filter() {
     const pathname = usePathname();
     const pageId = pathname.split('/')[pathname.split('/').length - 1]
-    console.log(pageId)
+    // console.log(pageId)
 
     return (
         <section className="mb-12 leading-relaxed">

@@ -61,22 +61,22 @@ export default function AccessibilityButtons({ zoom, isNavOpen, isContrast, setI
         // document.body.style.overflow = 'hidden'; // Disable scroll on body
 
         setIsActiveMag(true)
-        console.log('캡쳐를 시작합니다.')
+        // console.log('캡쳐를 시작합니다.')
         const canvas = await html2canvas(document.body);
-        console.log('주소를 생성합니다.')
+        // console.log('주소를 생성합니다.')
         const dataUrl = canvas.toDataURL();
-        console.log('URL is here. ::', dataUrl);
+        // console.log('URL is here. ::', dataUrl);
 
-        console.log('생성된 주소를 screenShot에 할당합니다.')
+        // console.log('생성된 주소를 screenShot에 할당합니다.')
         await setScreenShot(dataUrl);
 
     }
 
     /** 2. 생성된 주소를 useEffect를 이용해 확인하고, 즉시 돔 생성*/
     useEffect(() => {
-        console.log('돋보기 활성화?', activeMag)
+        // console.log('돋보기 활성화?', activeMag)
         if (activeMag) {
-            console.log('할당 결과', screenShot)
+            // console.log('할당 결과', screenShot)
             magnify("myimage", 3);
         }
     }, [screenShot, activeMag])
@@ -92,7 +92,7 @@ export default function AccessibilityButtons({ zoom, isNavOpen, isContrast, setI
         magniContainer = document.createElement('div');
         myImage = document.createElement('img');
 
-        console.log('스크린샷 주소 상태를 확인합니다.', screenShot)
+        // console.log('스크린샷 주소 상태를 확인합니다.', screenShot)
 
         backDrop.setAttribute('id', 'backdrop');
         magniContainer.setAttribute('id', 'img-magnifier-container');
