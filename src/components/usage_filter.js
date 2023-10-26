@@ -55,11 +55,11 @@ export default function Usage_0_filter() {
                             <li tabIndex={0} className="md:text-xl md:leading-relaxed break-keep">맨 처음에는 항상 기본순으로 되어 있다.</li>
                         </ul>
                         <ul className="px-4 py-2 text-sm border rounded shadow-md border-BMprimary bg-BM-background">
-                            <li tabIndex={0} className="py-2 border-b md:text-lg border-BMprimary"><strong className="block lg:mr-2 lg:inline font-hanna text-BMprimary">배민1</strong>배달 시간이 빠른 가게만 모아 볼 수 있다.</li>
-                            <li tabIndex={0} className="py-2 border-b md:text-lg border-BMprimary"><strong className="block lg:mr-2 font-hanna lg:inline text-BMprimary">쿠폰</strong> 할인 쿠폰을 제공하는 가게만 모아 볼 수 있다.</li>
-                            <li tabIndex={0} className="py-2 border-b md:text-lg border-BMprimary"><strong className="block lg:mr-2 lg:inline font-hanna text-BMprimary">1인분</strong>1인분을 배달해 주는 가게만 모아 볼 수 있다.</li>
-                            <li tabIndex={0} className="py-2 border-b md:text-lg border-BMprimary"><strong className="block lg:mr-2 lg:inline font-hanna text-BMprimary">배달팁</strong> 배달팁 금액이 싼 가게만 모아 볼 수 있다.</li>
-                            <li tabIndex={0} className="py-2 border-b md:text-lg border-BMprimary"><strong className="block lg:mr-2 lg:inline font-hanna text-BMprimary">별점</strong> 별점이 높은 가게만 모아 볼 수 있다.</li>
+                            <li tabIndex={0} className="py-2 border-b md:text-lg border-BMprimary"><span className="block lg:mr-2 lg:inline font-hanna text-BMprimary">배민1</span>배달 시간이 빠른 가게만 모아 볼 수 있다.</li>
+                            <li tabIndex={0} className="py-2 border-b md:text-lg border-BMprimary"><span className="block lg:mr-2 font-hanna lg:inline text-BMprimary">쿠폰</span> 할인 쿠폰을 제공하는 가게만 모아 볼 수 있다.</li>
+                            <li tabIndex={0} className="py-2 border-b md:text-lg border-BMprimary"><span className="block lg:mr-2 lg:inline font-hanna text-BMprimary">1인분</span>1인분을 배달해 주는 가게만 모아 볼 수 있다.</li>
+                            <li tabIndex={0} className="py-2 border-b md:text-lg border-BMprimary"><span className="block lg:mr-2 lg:inline font-hanna text-BMprimary">배달팁</span> 배달팁 금액이 싼 가게만 모아 볼 수 있다.</li>
+                            <li tabIndex={0} className="py-2 border-b md:text-lg border-BMprimary"><span className="block lg:mr-2 lg:inline font-hanna text-BMprimary">별점</span> 별점이 높은 가게만 모아 볼 수 있다.</li>
                             <li tabIndex={0} className="py-2 md:text-lg"><strong className="block lg:inline lg:mr-2 font-hanna text-BMprimary">최소주문금액</strong> 최소주문금액이 싼 가게만 모아 볼 수 있다.</li>
                         </ul>
                     </div>

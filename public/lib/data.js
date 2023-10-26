@@ -23,7 +23,7 @@ export const basic = [
             },
             {
                 id: '3',
-                desc: '<strong className="font-hanna">배달의민족</strong>을 입력하고 돋보기를 누른다.',
+                desc: '<strong>배달의민족</strong>을 입력하고 돋보기를 누른다.',
                 img: '/img/basic_imgs/b-3-3.png',
                 alt: '구글 플레이스토어 화면이다. 검색창에 배달의민족이 입력되어 있고, 키보드 위의 검색을 뜻하는 돋보기가 강조되어 있다.',
             },
@@ -35,7 +35,7 @@ export const basic = [
             },
             {
                 id: '5',
-                desc: '설치가 끝나면 <strong className="font-hanna">배달의민족</strong>을 사용할 수 있다.',
+                desc: '설치가 끝나면 <strong>배달의민족</strong>을 사용할 수 있다.',
                 img: '/img/basic_imgs/b-3-5.png',
                 alt: '스마트폰 바탕화면이다. 배달의민족 앱이 설치되어 배달의민족 아이콘이 나타나 있다.',
             },
@@ -55,7 +55,7 @@ export const basic = [
             },
             {
                 id: '2',
-                desc: '동의하는 내용에 체크하고 <strong>시작하기</strong>를 누른다. <strong>필수</strong>에 꼭 체크해야 앱을 이용할 수 있다. <strong>선택</strong>은 원하면 체크한다.',
+                desc: '동의하는 내용에 체크하고 <strong>시작하기</strong>를 누른다. <strong>필수</strong>에 꼭 체크해야 앱을 이용할 수 있다. <strong>선택</strong>은 원하면 체크한다. <p className="text-base">﹡선택에 체크하면 할인 정보, 이벤트 정보 등을 받아볼 수 있다.</p>',
                 img: '/img/basic_imgs/b-4-2.png',
                 alt: '스마트폰 화면에 배달의민족을 처음 실행한 화면이다. 배달의민족 앱 이용약관 동의를 확인하는 페이지다. 위치 기반 서비스 약관 동의는 <strong>필수</strong>, 마케팅 정보 앱 푸시 알림 수신 동의는 선택 동의 항목이다. 위치 기반 서비스 약관 동의는 배달받기 위해 나의 위치 정보를 확인하는 것이다. 마케팅 정보 앱 푸시 알림 수신 동의는 배달앱의 더 많은 정보를 알림으로 알려주는 것이다.',
             },
@@ -81,12 +81,17 @@ export const basic = [
     },
     {
         id: 3,
+        isTutorial: false,
+        title: '첫 화면 이해하기'
+    },
+    {
+        id: 4,
         isTutorial: true,
         title: '회원가입 하기',
         tutoContents: [
             {
                 id: '1',
-                desc: '배달의민족 첫 화면에서 <strong className="font-hanna text-BM-primary">My배민(마이 배민)을</strong> 누른다.',
+                desc: '배달의민족 첫 화면에서 <strong>My배민(마이 배민)을</strong> 누른다.',
                 img: '/img/basic_imgs/b-5-1.png',
                 alt: '배달의민족 첫 화면이다. 맨 위 오른쪽에 웃고 있는 마이 배민 아이콘이 강조되어 있다. 손가락 모양의 아이콘이 마이 배민 아이콘을 가리키고 있다.',
             },
@@ -104,7 +109,7 @@ export const basic = [
             },
             {
                 id: '4',
-                desc: `<p className="mb-2">이메일로 시작하기를 누른다</p>`,
+                desc: `<div className="mb-2">이메일로 시작하기를 누른다</div>`,
                 img: '/img/basic_imgs/b-5-4.png',
                 alt: '회원가입 첫 페이지에 회원가입을 위한 약관이 나타난 화면이다. 필수 배달의민족 이용약관 동의, 필수 전자금융거래 이용약관 동의, 필수 개인정보 수집 이용 동의, 선택 개인정보 수집 이용 동의, 선택 마케팅정보 메일, SMS 수신동의, 선택 개인정보 제3자 제공 동의가 순서대로 있다. 화면 맨 아래에 시작하기 버튼이 있고 손가락 모양의 아이콘이 버튼을 가리키고 있다.',
             },
@@ -122,7 +127,7 @@ export const basic = [
             },
             {
                 id: '7',
-                desc: '나의 정보를 입력하고 <strong>인증번호 요청</strong>을 누른다. 인증번호: 실제로 사용하는 전화인지 확인하는 숫자. 문자로 받는다.',
+                desc: '나의 정보를 입력하고 <strong>인증번호 요청</strong>을 누른다. <p className="text-base" style="color:#888;">인증번호: 실제로 사용하는 전화인지 확인하는 숫자. 문자로 받는다.</p>',
                 img: '/img/basic_imgs/b-5-7.png',
                 alt: '회원가입을 위한 본인인증 화면이다. 화면 맨 아래에 휴대폰 인증하기 버튼이 있고 손가락 모양의 아이콘이 버튼을 가리키고 있다.',
             },
@@ -147,11 +152,7 @@ export const basic = [
             },
         ],
     },
-    {
-        id: 4,
-        isTutorial: false,
-        title: '첫 화면 이해하기'
-    },
+
 ]
 
 export const usage = [
@@ -209,7 +210,7 @@ export const usage = [
             },
             {
                 id: '4',
-                desc: '<p><strong>장바구니에 메뉴를 추가했습니다</strong>라는 메시지가 나오고, <strong>장바구니 보기</strong>에 숫자가 생긴다.</p> <p className="caption lg:text-left lg:text-lg lg:font-normal lg:text-BM-gray200">선택한 수량만큼 <strong>장바구니 보기</strong>에 숫자로 표시된다.</p>',
+                desc: '<p><strong>장바구니에 메뉴를 추가했습니다</strong>라는 메시지가 나오고, <strong>장바구니 보기</strong>에 숫자가 생긴다.</p> <p className="caption lg:text-left lg:font-normal lg:text-BM-gray200">선택한 수량만큼 <strong>장바구니 보기</strong>에 숫자로 표시된다.</p>',
                 img: '/img/usage/rg-2-4.png',
                 alt: '장바구니에 메뉴를 추가했습니다 라는 알림이 화면에 표시되어 있다. 화면 맨 밑 장바구니 보기 버튼이 강조되어 있다.',
             },
@@ -239,7 +240,8 @@ export const usage = [
             },
             {
                 id: '4',
-                desc: '화면 맨 아래로 내려간다. 결제수단에서 <strong>신용/체크카드</strong>를 선택하고 <strong>결제하기</strong>를 누른다.',
+                desc: '화면 맨 아래에 있는 결제수단에서 <strong>신용/체크카드</strong>를 선택한다. 결제할 카드 종류를 선택하고 <strong>결제하기</strong>를 누른다.',
+                // desc: '화면 맨 아래로 내려간다. 결제수단에서 <strong>신용/체크카드</strong>를 선택하고 <strong>결제하기</strong>를 누른다.',
                 img: '/img/usage/rg-3-4.png',
                 alt: '배달의민족 주문하기에서 결제수단을 선택하는 화면이다. 결제수단으로 신용/체크카드가 설정되어 있다. 화면 맨 아래에 22,000원 결제하기 버튼이 강조되어 있고, 손가락 모양의 아이콘이 버튼을 가리키고 있다.',
             },
@@ -296,7 +298,7 @@ export const usage = [
             },
             {
                 id: '13',
-                desc: '이용약관 동의에 <strong>전체동의</strong>를 체크한 후, 결제에 사용할 카드를 선택한다.',
+                desc: '이용약관 동의에서 <strong>전체동의</strong>를 체크하고 다음을 누른다. 안내를 따라 카드 번호를 입력하고 결제한다.',
                 img: '/img/usage/rg-3-13.png',
                 alt: '배달의민족 카드 결제 화면이다. 이용약관에 동의하는 항목이 있으며 전체동의에 체크가 되어 있다. 그 아래에는 신한, 현대 등 결제할 카드를 선택하는 화면이 있다.',
             },
@@ -694,7 +696,7 @@ export const advanced = [
         content: [
             {
                 id: 1,
-                img: '/img/advanced_imgs/adv_id_7_1.png',
+                img: '/img/advanced_imgs/adv_id_3_1.png',
                 desc: `배달의민족 첫 화면에서 먹고 싶은 음식을 검색한다.`,
                 alt: '한 사람이 배달의민족 앱을 켜고 쿠폰을 받는 이벤트 페이지에 접속하고 있다. 배달의민족의 첫 화면이다. 상단의 검색창에 샌드위치라고 검색하고 있다.',
             },
