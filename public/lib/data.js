@@ -55,7 +55,7 @@ export const basic = [
             },
             {
                 id: '2',
-                desc: '동의하는 내용에 체크하고 <strong>시작하기</strong>를 누른다. <strong>필수</strong>에 꼭 체크해야 앱을 이용할 수 있다. <strong>선택</strong>은 원하면 체크한다. <p className="text-base">﹡선택에 체크하면 할인 정보, 이벤트 정보 등을 받아볼 수 있다.</p>',
+                desc: '동의하는 내용에 체크하고 <strong>시작하기</strong>를 누른다. <strong>필수</strong>에 꼭 체크해야 앱을 이용할 수 있다. <strong>선택</strong>은 원하면 체크한다. <p style="color:#888;" className="text-base">선택에 체크하면 할인 정보, 이벤트 정보 등을 받아볼 수 있다.</p>',
                 img: '/img/basic_imgs/b-4-2.png',
                 alt: '스마트폰 화면에 배달의민족을 처음 실행한 화면이다. 배달의민족 앱 이용약관 동의를 확인하는 페이지다. 위치 기반 서비스 약관 동의는 <strong>필수</strong>, 마케팅 정보 앱 푸시 알림 수신 동의는 선택 동의 항목이다. 위치 기반 서비스 약관 동의는 배달받기 위해 나의 위치 정보를 확인하는 것이다. 마케팅 정보 앱 푸시 알림 수신 동의는 배달앱의 더 많은 정보를 알림으로 알려주는 것이다.',
             },
@@ -91,13 +91,13 @@ export const basic = [
         tutoContents: [
             {
                 id: '1',
-                desc: '배달의민족 첫 화면에서 <strong>My배민(마이 배민)을</strong> 누른다.',
+                desc: '배달의민족 첫 화면에서 <strong>My배민(마이 배민)</strong>을 누른다.',
                 img: '/img/basic_imgs/b-5-1.png',
                 alt: '배달의민족 첫 화면이다. 맨 위 오른쪽에 웃고 있는 마이 배민 아이콘이 강조되어 있다. 손가락 모양의 아이콘이 마이 배민 아이콘을 가리키고 있다.',
             },
             {
                 id: '2',
-                desc: '로그인해주세요를 누른다.',
+                desc: '<strong>로그인하고 시작하기</strong>를 누른다',
                 img: '/img/basic_imgs/b-5-2.png',
                 alt: '마이 배민 페이지 화면이다. 위쪽에 로그인해주세요 버튼이 강조되어 있다. 손가락 모양의 아이콘이 로그인해주세요 버튼을 가리키고 있다.',
             },
@@ -109,7 +109,7 @@ export const basic = [
             },
             {
                 id: '4',
-                desc: `<div className="mb-2">이메일로 시작하기를 누른다</div>`,
+                desc: `<strong>이메일로 시작하기</strong>를 누른다.`,
                 img: '/img/basic_imgs/b-5-4.png',
                 alt: '회원가입 첫 페이지에 회원가입을 위한 약관이 나타난 화면이다. 필수 배달의민족 이용약관 동의, 필수 전자금융거래 이용약관 동의, 필수 개인정보 수집 이용 동의, 선택 개인정보 수집 이용 동의, 선택 마케팅정보 메일, SMS 수신동의, 선택 개인정보 제3자 제공 동의가 순서대로 있다. 화면 맨 아래에 시작하기 버튼이 있고 손가락 모양의 아이콘이 버튼을 가리키고 있다.',
             },
@@ -204,13 +204,13 @@ export const usage = [
             },
             {
                 id: '3',
-                desc: '<p>무엇을 시킬지 선택하고, 몇 개 시킬지 수량을 정한 후 <strong>담기</strong>를 누른다. </p> <p class="caption lg:text-left">맛, 소스, 토핑 등 옵션을 선택할 수 있다.</p>',
+                desc: '<p>무엇을 시킬지 선택하고, 몇 개 시킬지 수량을 정한 후 <strong>담기</strong>를 누른다. </p> <p style="color:#888;" className="text-base">맛, 소스, 토핑 등 옵션을 선택할 수 있다.</p>',
                 img: '/img/usage/rg-2-3.png',
                 alt: 'BLT 샌드위치를 선택하고, 추가 옵션으로 코우슬로 샐러드, 콘 스프를 추가한 화면이 나타나 있다. 21,000원 담기 버튼이 강조되어 있고, 손가락 모양이 가리키고 있다.',
             },
             {
                 id: '4',
-                desc: '<p><strong>장바구니에 메뉴를 추가했습니다</strong>라는 메시지가 나오고, <strong>장바구니 보기</strong>에 숫자가 생긴다.</p> <p className="caption lg:text-left lg:font-normal lg:text-BM-gray200">선택한 수량만큼 <strong>장바구니 보기</strong>에 숫자로 표시된다.</p>',
+                desc: '<p><strong>장바구니에 메뉴를 추가했습니다</strong>라는 메시지가 나오고, <strong>장바구니 보기</strong>에 숫자가 생긴다.</p> <p style="color:#888;" className="text-base">선택한 수량만큼 <strong>장바구니 보기</strong>에 숫자로 표시된다.</p>',
                 img: '/img/usage/rg-2-4.png',
                 alt: '장바구니에 메뉴를 추가했습니다 라는 알림이 화면에 표시되어 있다. 화면 맨 밑 장바구니 보기 버튼이 강조되어 있다.',
             },
@@ -247,7 +247,7 @@ export const usage = [
             },
             {
                 id: '5',
-                desc: '결제수단이 신용/체크카드인지 확인하고 <strong>본인 확인 후 결제하기</strong>를 누른다. <p className="caption lg:text-left lg:text-lg lg:font-normal lg:text-BM-gray200">첫 주문이라면 본인 확인이 필요하다.</p>',
+                desc: '결제수단이 신용/체크카드인지 확인하고 <strong>본인 확인 후 결제하기</strong>를 누른다. <p style="color:#888;" className="text-base">첫 주문이라면 본인 확인이 필요하다.</p>',
                 img: '/img/usage/rg-3-5.png',
                 alt: '배달의민족 결제하기 화면이다. 화면 가장 아래에 본인 확인 후 결제하기 버튼이 강조되어 있고, 손가락 모양의 아이콘이 버튼을 가리키고 있다.',
             },
@@ -292,7 +292,7 @@ export const usage = [
             },
             {
                 id: '12',
-                desc: '주문 금액과 배달팁이 맞는지 확인하고 <strong>결제하기</strong>를 누른다. <p className="caption lg:text-base lg:text-left">주문 후 취소하려면 어렵고 복잡하다. 주문은 신중하게!</p>',
+                desc: '주문 금액과 배달팁이 맞는지 확인하고 <strong>결제하기</strong>를 누른다. <p style="color:#888;" className="text-base">주문 후 취소하려면 어렵고 복잡하다. 주문은 신중하게!</p>',
                 img: '/img/usage/rg-3-12.png',
                 alt: '배달의민족 주문하기 화면으로 돌아왔다. 결제금액, 주문금액, 배달팁 부분이 강조되어 있고 화면 맨 아래에 22,000원 결제하기 버튼도 강조되어 있다. 손가락 모양의 아이콘이 22,000원 결제하기 버튼을 가리키고 있다.',
             },
@@ -343,7 +343,7 @@ export const advanced = [
             {
                 id: 1,
                 img: '/img/advanced_imgs/adv_id_0_1.png',
-                desc: `배달의민족 첫 화면에서 <strong>배민1</strong>을 누른다.`,
+                desc: `배달의민족 첫 화면에서 <strong>알뜰·한집배달</strong>을 누른다.`,
                 alt: '배달의민족의 첫 화면이다. 손가락 모양의 아이콘이 배민원 버튼을 가리키고 있다.',
             },
             {
@@ -460,7 +460,7 @@ export const advanced = [
             {
                 id: 4,
                 img: '/img/advanced_imgs/adv_id_2_4.png',
-                desc: `<p>지도에서 다른 가게를 더 볼 수 있다. 마음에 드는 곳을 선택해서 메뉴를 주문한다. </p><p className="caption lg:text-left lg:text-lg lg:font-normal lg:text-BM-gray200">목록보기를 누르면 가게 이름과 음식 사진이 나온다.</p>`,
+                desc: `<p>지도에서 다른 가게를 더 볼 수 있다. 마음에 드는 곳을 선택해서 메뉴를 주문한다. </p><p style="color:#888;" className="text-base">목록보기를 누르면 가게 이름과 음식 사진이 나온다.</p>`,
                 alt: '지도 위에 여러 가지 음식 모양의 아이콘이 표시되어 있다. 손가락 모양 아이콘이 목록보기 버튼을 가리키고 있다.',
             },
         ]
@@ -656,13 +656,13 @@ export const advanced = [
             {
                 id: 4,
                 img: '/img/advanced_imgs/adv_id_6_4.png',
-                desc: `<p><strong>구매하기</strong>를 누르고 수량을 정한 후 장바구니에 담는다.</p><p className="caption lg:text-left lg:text-lg lg:font-normal lg:text-BM-gray200">담은 물건 수량만큼 장바구니에 숫자로 표시된다.</p>`,
+                desc: `<p><strong>구매하기</strong>를 누르고 수량을 정한 후 장바구니에 담는다.</p><p style="color:#888;" className="text-base">담은 물건 수량만큼 장바구니에 숫자로 표시된다.</p>`,
                 alt: '검색한 세제의 상세 정보가 있는 페이지. 하단에 구매하기 버튼이 있고, 손가락 아이콘이 버튼을 가리키고 있다.',
             },
             {
                 id: 5,
                 img: '/img/advanced_imgs/adv_id_6_5.png',
-                desc: `<p><strong>배달 주문하기</strong>를 눌러서 결제하고 주문한다.</p><p className="caption lg:text-left lg:text-lg lg:font-normal lg:text-BM-gray200">B마트의 최소주문금액은 1만 원이다. 1만 원 넘게 주문해야 한다.</p>`,
+                desc: `<p><strong>배달 주문하기</strong>를 눌러서 결제하고 주문한다.</p><p style="color:#888;" className="text-base">B마트의 최소주문금액은 1만 원이다. 1만 원 넘게 주문해야 한다.</p>`,
                 alt: '화면 상단에 총 금액이 나와있고, 하단에 배달 주문하기 버튼이 있다. 그 위에 손가락이 올려져 버튼을 가리키고 있다.',
             },
         ]

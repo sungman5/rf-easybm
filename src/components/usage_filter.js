@@ -60,7 +60,7 @@ export default function Usage_0_filter() {
                             <li tabIndex={0} className="py-2 border-b md:text-lg border-BMprimary"><span className="block lg:mr-2 lg:inline font-hanna text-BMprimary">1인분</span>1인분을 배달해 주는 가게만 모아 볼 수 있다.</li>
                             <li tabIndex={0} className="py-2 border-b md:text-lg border-BMprimary"><span className="block lg:mr-2 lg:inline font-hanna text-BMprimary">배달팁</span> 배달팁 금액이 싼 가게만 모아 볼 수 있다.</li>
                             <li tabIndex={0} className="py-2 border-b md:text-lg border-BMprimary"><span className="block lg:mr-2 lg:inline font-hanna text-BMprimary">별점</span> 별점이 높은 가게만 모아 볼 수 있다.</li>
-                            <li tabIndex={0} className="py-2 md:text-lg"><strong className="block lg:inline lg:mr-2 font-hanna text-BMprimary">최소주문금액</strong> 최소주문금액이 싼 가게만 모아 볼 수 있다.</li>
+                            <li tabIndex={0} className="py-2 md:text-lg"><strong className="block font-normal lg:inline lg:mr-2 font-hanna text-BMprimary">최소주문금액</strong> 최소주문금액이 싼 가게만 모아 볼 수 있다.</li>
                         </ul>
                     </div>
                 </div>
