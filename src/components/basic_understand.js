@@ -67,7 +67,7 @@ export default function UnderstandFirstPage() {
           <p tabIndex={0} className="mb-1 text-lg md:py-2 md:text-2xl font-hanna text-BMprimary">
             7. 알뜰/한집배달
           </p>
-          <p tabIndex={0}>알뜰 배달은 일반 배달보다 배달팁이 싼 배달, 일반 배달보다 빠르게 받을 수 있는 배달이다. </p>
+          <p tabIndex={0}>알뜰배달은 일반 배달보다 배달팁이 싼 배달이다. 한집배달은 일반 배달보다 빠르게 받을 수 있는 배달이다.</p>
         </li>
         <li className="py-3 border-b md:text-lg">
           <p tabIndex={0} className="mb-1 text-lg md:py-2 md:text-2xl font-hanna text-BMprimary">
